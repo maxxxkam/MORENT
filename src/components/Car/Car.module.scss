@@ -1,0 +1,19 @@
+.car_card{
+  h3{
+    font-size: 22px;
+    font-weight: 600;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  >p{
+    opacity: 60%;
+  }
+}
+
+.prices{
+  display: flex;
+  s{
+    opacity: 60%;
+  }
+}

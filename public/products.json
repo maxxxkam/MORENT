@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "Koenigsegg",
+    "category": "Sport",
+    "image": "/car-img1.png",
+    "price": "$99.00/day",
+    "fuel": "90L",
+    "transmission": "Manual",
+    "seats": "2 People",
+    "oldPrice": null
+  },
+  {
+    "id": 2,
+    "name": "Nissan GT-R",
+    "category": "Sport",
+    "image": "/car-img2.png",
+    "price": "$80.00/day",
+    "fuel": "80L",
+    "transmission": "Manual",
+    "seats": "2 People",
+    "oldPrice": "$100.00"
+  },
+  {
+    "id": 3,
+    "name": "Rolls-Royce Phantom",
+    "category": "Luxury",
+    "image": "/car-img3.png",
+    "price": "$250.00/day",
+    "fuel": "85L",
+    "transmission": "Automatic",
+    "seats": "4 People",
+    "oldPrice": "$270.00"
+  },
+  {
+    "id": 4,
+    "name": "Tesla Model S",
+    "category": "Electric",
+    "image": "/car-img4.png",
+    "price": "$120.00/day",
+    "fuel": "Electric",
+    "transmission": "Automatic",
+    "seats": "5 People",
+    "oldPrice": null
+  },
+  {
+    "id": 5,
+    "name": "Audi Q7",
+    "category": "SUV",
+    "image": "/car-img5.png",
+    "price": "$95.00/day",
+    "fuel": "75L",
+    "transmission": "Automatic",
+    "seats": "7 People",
+    "oldPrice": null
+  },
+  {
+    "id": 6,
+    "name": "BMW X5",
+    "category": "SUV",
+    "image": "/car-img6.png",
+    "price": "$90.00/day",
+    "fuel": "80L",
+    "transmission": "Automatic",
+    "seats": "5 People",
+    "oldPrice": "$100.00"
+  },
+  {
+    "id": 7,
+    "name": "Toyota Corolla",
+    "category": "Sedan",
+    "image": "/car-img7.png",
+    "price": "$45.00/day",
+    "fuel": "55L",
+    "transmission": "Automatic",
+    "seats": "5 People",
+    "oldPrice": null
+  },
+  {
+    "id": 8,
+    "name": "Ford Mustang",
+    "category": "Sport",
+    "image": "/car-img8.png",
+    "price": "$110.00/day",
+    "fuel": "70L",
+    "transmission": "Manual",
+    "seats": "4 People",
+    "oldPrice": "$120.00"
+  },
+  {
+    "id": 9,
+    "name": "Chevrolet Camaro",
+    "category": "Sport",
+    "image": "/car-img9.png",
+    "price": "$105.00/day",
+    "fuel": "72L",
+    "transmission": "Manual",
+    "seats": "4 People",
+    "oldPrice": null
+  },
+  {
+    "id": 10,
+    "name": "Honda Civic",
+    "category": "Sedan",
+    "image": "/car-img10.png",
+    "price": "$50.00/day",
+    "fuel": "60L",
+    "transmission": "Automatic",
+    "seats": "5 People",
+    "oldPrice": "$60.00"
+  },
+  {
+    "id": 11,
+    "name": "Hyundai Tucson",
+    "category": "SUV",
+    "image": "/car-img11.png",
+    "price": "$85.00/day",
+    "fuel": "70L",
+    "transmission": "Automatic",
+    "seats": "5 People",
+    "oldPrice": null
+  },
+  {
+    "id": 12,
+    "name": "Jeep Wrangler",
+    "category": "SUV",
+    "image": "/car-img12.png",
+    "price": "$95.00/day",
+    "fuel": "65L",
+    "transmission": "Manual",
+    "seats": "4 People",
+    "oldPrice": "$110.00"
+  },
+  {
+    "id": 13,
+    "name": "Kia Sportage",
+    "category": "SUV",
+    "image": "/car-img1.png",
+    "price": "$75.00/day",
+    "fuel": "68L",
+    "transmission": "Automatic",
+    "seats": "5 People",
+    "oldPrice": null
+  },
+  {
+    "id": 14,
+    "name": "Lamborghini Huracan",
+    "category": "Sport",
+    "image": "/car-img2.png",
+    "price": "$300.00/day",
+    "fuel": "85L",
+    "transmission": "Manual",
+    "seats": "2 People",
+    "oldPrice": "$320.00"
+  },
+  {
+    "id": 15,
+    "name": "Mazda CX-5",
+    "category": "SUV",
+    "image": "/car-img3.png",
+    "price": "$88.00/day",
+    "fuel": "75L",
+    "transmission": "Automatic",
+    "seats": "5 People",
+    "oldPrice": null
+  },
+  {
+    "id": 16,
+    "name": "Mercedes-Benz G-Class",
+    "category": "Luxury SUV",
+    "image": "/car-img4.png",
+    "price": "$200.00/day",
+    "fuel": "90L",
+    "transmission": "Automatic",
+    "seats": "5 People",
+    "oldPrice": "$220.00"
+  },
+  {
+    "id": 17,
+    "name": "Porsche 911",
+    "category": "Sport",
+    "image": "/car-img5.png",
+    "price": "$270.00/day",
+    "fuel": "75L",
+    "transmission": "Manual",
+    "seats": "2 People",
+    "oldPrice": "$280.00"
+  },
+  {
+    "id": 18,
+    "name": "Range Rover Sport",
+    "category": "Luxury SUV",
+    "image": "/car-img6.png",
+    "price": "$185.00/day",
+    "fuel": "80L",
+    "transmission": "Automatic",
+    "seats": "5 People",
+    "oldPrice": null
+  },
+  {
+    "id": 19,
+    "name": "Subaru Forester",
+    "category": "SUV",
+    "image": "/car-img7.png",
+    "price": "$70.00/day",
+    "fuel": "65L",
+    "transmission": "Manual",
+    "seats": "5 People",
+    "oldPrice": "$75.00"
+  },
+  {
+    "id": 20,
+    "name": "Volkswagen Golf",
+    "category": "Hatchback",
+    "image": "/car-img8.png",
+    "price": "$55.00/day",
+    "fuel": "60L",
+    "transmission": "Automatic",
+    "seats": "5 People",
+    "oldPrice": "$65.00"
+  }
+]

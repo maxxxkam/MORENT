@@ -4,7 +4,7 @@ import s from './PickUp.module.scss'
 const PickUp = () => {
   return (
     <>
-    <scetion className={s.PickUp}>
+    <section className={s.PickUp}>
       <div className="container">
         <div className={s.wrapper}>
        <div className={s.cards}>
@@ -53,7 +53,7 @@ const PickUp = () => {
        
         </div>
       </div>
-    </scetion>
+    </section>
     </>
   )
 }
