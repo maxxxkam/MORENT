@@ -1,5 +1,7 @@
 import React from "react";
 import s from "./Hero.module.scss";
+import Btn from "../btn/Btn";
+import Btn2 from "../Btn2/Btn2";
 
 const Hero = () => {
   return (
@@ -14,7 +16,7 @@ const Hero = () => {
                   Ease of doing a car rental safely and reliably. Of course at a
                   low price.
                 </p>
-                <button className={s.btn}>Rental Car</button>
+                <Btn>Rental  car</Btn>
               </div>
             </div>
             <div className={s.card}>
@@ -24,7 +26,7 @@ const Hero = () => {
                   Providing cheap car rental services and safe and comfortable
                   facilities.
                 </p>
-                <button className={s.btn2}>Rental Car </button>
+                <Btn2>Rental car</Btn2>
               </div>
             </div>
           </div>

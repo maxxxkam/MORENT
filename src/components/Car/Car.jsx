@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './Car.module.scss';
+import Btn from '../btn/Btn';
 
 const CarCard = ({ car }) => {
   return (
@@ -9,12 +10,14 @@ const CarCard = ({ car }) => {
         <p className={s.car_category}>{car.category}</p>
         <img src={car.image} alt={car.name} className={s.car_image} />
         <p className={s.car_details}>
-          {car.fuel} | {car.transmission} | {car.seats}
+          <img src="/gas-station.svg" alt="" />{car.fuel} <img src="/Car (2).svg" alt="" />{car.transmission} <img src="/peoples1.svg" alt="" />{car.seats}
         </p>
-       <div className={s.prices}>
+      <div className={s.rent}>
+      <div className={s.prices}>
        <p className={s.price}>{car.price}</p> {car.oldPrice && <s className={s.old_price}>{car.oldPrice}</s>}
        </div>
-        <button className={s.rent_button}>Rent Now</button>
+        <Btn>Rent now</Btn>
+      </div>
       </div>
  
   );
