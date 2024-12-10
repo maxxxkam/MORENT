@@ -14,26 +14,27 @@ const Footer = () => {
                 </div>
                 <div className={s.box}>
                     <h2>About</h2>
-                    <p>How it works</p>
-                    <p>Featured</p>
-                    <p>Partnership</p>
-                    <p>Bussiness Relation</p>
+                    <a>How it works</a>
+                    <a>Featured</a>
+                    <a>Partnership</a>
+                    <a>Bussiness Relation</a>
                 </div>
                 
                 <div className={s.box}>
                     <h2>Community</h2>
-                    <p>Events</p>
-                    <p>Blog</p>
-                    <p>Podcast</p>
-                    <p>Invite a friend</p>
+                    <a>Events</a>
+                    <a>Blog</a>
+                    <a>Podcast</a>
+                    <a>Invite a friend</a>
                 </div>
                 
                 <div className={s.box}>
                     <h2>Socials</h2>
-                    <p>Discord</p>
-                    <p>Instagram</p>
-                    <p>Twitter</p>
-                    <p>Facebook</p>
+                    <a>Discord</a>
+                    <a>Instagram</a>
+                    <a>Twitter</a>
+                    <a>Facebook</a>
+                    
                 </div>
                 
 

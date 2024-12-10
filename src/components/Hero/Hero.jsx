@@ -26,6 +26,7 @@ const Hero = () => {
                   Providing cheap car rental services and safe and comfortable
                   facilities.
                 </p>
+                
                 <Btn2>Rental car</Btn2>
               </div>
             </div>
