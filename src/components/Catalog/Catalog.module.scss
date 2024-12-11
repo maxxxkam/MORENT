@@ -2,50 +2,9 @@
     display: grid;
     grid-template-columns: 260px 3fr;
     gap: 20px;
-}
-
-
-.list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    
-}
-
-.filter{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 20px;
-}
-
-.filterWrap{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    
-    >.filterGroup {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        label{
-            display: flex;
-            
-            gap: 10px;
-        }
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
     }
 }
 
-.fill{
-    display: flex;
-    gap: 10px;
-}
 
-.filterWrap2{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: 10px;
-}

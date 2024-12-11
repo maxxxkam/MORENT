@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import Catalog from "../components/Catalog/Catalog";
+import SingleCar from "../components/SingleCar/SingleCar";
+
 
 const CarPage = () => {
+ 
   return (
-    <>
-   
-    </>
-  )
-}
+    <div>
+      <SingleCar/>
 
-export default CarPage
+      <Catalog/>
+    </div>
+  );
+};
+
+export default CarPage;
