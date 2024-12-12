@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import s from "./SingleCar.module.scss";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Products from "/public/products.json";
 import Btn from "../btn/Btn";
 import Modal from "../modal/Modal";
@@ -61,19 +61,17 @@ const SingleCar = () => {
                     <img src={car.image} alt={car.name} />
                   </div>
                   <div className={s.bottomImage}>
-                    {[
-                      car.image,
-                      car.images[0],
-                      car.images[1],
-                    ].map((image, index) => (
-                      <img
-                        key={index}
-                        src={image}
-                        alt={`Car ${index + 1}`}
-                        className={s.thumbnail}
-                        onClick={() => openModal(image)}
-                      />
-                    ))}
+                    {[car.image, car.images[0], car.images[1]].map(
+                      (image, index) => (
+                        <img
+                          key={index}
+                          src={image}
+                          alt={`Car ${index + 1}`}
+                          className={s.thumbnail}
+                          onClick={() => openModal(image)}
+                        />
+                      )
+                    )}
                   </div>
                 </div>
               </div>
@@ -115,8 +113,9 @@ const SingleCar = () => {
                     </div>
                   </div>
                 </div>
-
-                <Btn>Rent now</Btn>
+                <Link to={'/Admin'}>
+                  <Btn>Rent now</Btn>
+                </Link>
               </div>
             </div>
           </div>

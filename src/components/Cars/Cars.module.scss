@@ -26,11 +26,21 @@
   display: flex;
   justify-content: space-between;
   margin: 40px;
+  transition: 0.3s;
   p{
     opacity: 65%;
     font-size: 20px;
   }
   a{
     font-size: 20px;
+    color: #54A6FF;
+    text-decoration: none;
+    transition: 0.3s;
+    a:hover {
+      color: #0056b3; /* Более темный голубой для эффекта наведения */
+      text-decoration: underline; /* Добавляет подчеркивание при наведении */
+    }
+    
+    
   }
 }

@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import CarPage from './pages/CarPage'
 import Filter from './pages/Filter'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import Admin from './components/Admin/Admin'
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
     <Route path='/' element={<Home />} />
     <Route path="/carPage/:id" element={<CarPage />} />
     <Route path='/filter' element={<Filter/>} />
+    <Route path='/admin' element={<Admin/>} />
+
   </Routes>
     <Footer/>
     </>
