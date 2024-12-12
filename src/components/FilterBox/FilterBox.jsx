@@ -55,7 +55,7 @@ const FilterBox = ({
             <input
               type="range"
               min="0"
-              max="300"
+              max="200"
               value={maxPrice}
               onChange={(e) => setMaxPrice(Number(e.target.value))}
             />
