@@ -1,35 +1,33 @@
-import React, { useState } from 'react'
-import s from './Header.module.scss'
-import SectionTitle from '../SectionTitle/SectionTitle'
-import { Link } from 'react-router-dom'
+import React from "react";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import { FaBell } from "react-icons/fa"; // Используем иконку из react-icons (или замените на свой img)
 
-const Header = () => {
-  
+function NotificationDropdown() {
   return (
-    <>
-    <header className={s.header}>
-    <div className="container">
-      <div className={s.wrapper}>
-      <div className={s.box}>
-        <Link className={s.logo} to={'/'} >
-        <SectionTitle>MORANT</SectionTitle>
-        </Link>
-        <input placeholder='Search something here' className={s.search} type="text" />
-        <button><img src="/filter-img.svg" alt=""/></button>
-      </div>
-      <div className={`${s.menu}`}>
-        <Link to={'/favorite'} >
-        <img src="/Like-img.svg" alt="" />
-        </Link>
-        <img src="/Notification-img.svg" alt="" />
-        <img src="/Settings-img.svg" alt="" />
-        <img src="/Profile-img.svg" alt="" />
-      </div>
-      </div>
-    </div>
-    </header>
-    </>
-  )
+    <Dropdown>
+      <Dropdown.Toggle
+        variant="light"
+        id="notification-dropdown"
+        className={s.notification-toggle}
+      >
+        <img
+          src="/notification-bell.svg"
+          alt="Notifications"
+          style={{ width: "24px", height: "24px" }}
+        />
+        <span className={s.notification-badge}>3</span> {/* Количество уведомлений */}
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Header.Header>Notifications</Dropdown.Header.Header>
+        <Dropdown.Item href="#/action-1">You have a new message</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Your booking is confirmed</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">System maintenance scheduled</Dropdown.Item>
+        <Dropdown.Divider />
+        <Dropdown.Item href="#/action-4">View all notifications</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+  );
 }
 
-export default Header
+export default NotificationDropdown;

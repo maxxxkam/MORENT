@@ -5,30 +5,29 @@ import { Link } from "react-router-dom";
 
 const CarCard = ({ car }) => {
   const [isFavorite, setIsFavorite] = useState(false); // Состояние лайка
-  const [favoriteCars, setFavoriteCars] = useState([]); // Состояние для избранных машин
 
-  // Загружаем избранные машины из localStorage при первом рендере
+  // Проверяем, есть ли машина в избранных при загрузке компонента
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("favoriteCars")) || [];
-    setFavoriteCars(storedFavorites);
     setIsFavorite(storedFavorites.some((favCar) => favCar.id === car.id));
   }, [car.id]);
 
   // Функция для добавления/удаления машины из избранного
   const handleFavoriteClick = () => {
+    const storedFavorites = JSON.parse(localStorage.getItem("favoriteCars")) || [];
+
     let updatedFavorites;
     if (isFavorite) {
       // Убираем машину из избранного
-      updatedFavorites = favoriteCars.filter((favCar) => favCar.id !== car.id);
+      updatedFavorites = storedFavorites.filter((favCar) => favCar.id !== car.id);
     } else {
       // Добавляем машину в избранное
-      updatedFavorites = [...favoriteCars, car];
+      updatedFavorites = [...storedFavorites, car];
     }
 
-    // Обновляем состояние и сохраняем в localStorage
-    setFavoriteCars(updatedFavorites);
+    // Сохраняем в localStorage и обновляем состояние
     localStorage.setItem("favoriteCars", JSON.stringify(updatedFavorites));
-    setIsFavorite(!isFavorite); // Меняем состояние иконки лайка
+    setIsFavorite(!isFavorite);
   };
 
   return (
@@ -38,9 +37,9 @@ const CarCard = ({ car }) => {
       <img src={car.image} alt={car.name} className={s.car_image} />
       
       <p className={s.car_details}>
-        <img src="/gas-station.svg" alt="" />
-        {car.fuel} <img src="/Car (2).svg" alt="" />
-        {car.transmission} <img src="/peoples1.svg" alt="" />
+        <img src="/gas-station.svg" alt="Fuel" />
+        {car.fuel} <img src="/Car (2).svg" alt="Transmission" />
+        {car.transmission} <img src="/peoples1.svg" alt="Seats" />
         {car.seats}
       </p>
       

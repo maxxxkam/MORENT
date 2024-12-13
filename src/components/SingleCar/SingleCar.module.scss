@@ -13,6 +13,10 @@
   img {
     width: 100%;
   }
+  @media (max-width:450px) {
+    max-width: 350px;
+    margin: 0 auto;
+  }
 }
 
 .box_2 {
@@ -28,11 +32,16 @@
       opacity: 60%;
     }
   }
+
+  @media (max-width:450px) {
+    max-width: 350px;
+  }
 }
 
 .zagalovok{
   // font-size: 32px;
   font-size: clamp(1rem, 0.666rem + 1.45vw, 1.75rem);
+  color: #fff;
 }
 
 

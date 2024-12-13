@@ -23,14 +23,18 @@ const Favorite = () => {
             {favoriteCars.map((car) => (
               <div key={car.id} className={s.favorite_car}>
                <div className={s.main_info}>
+                 <div className={s.name_a_img}>
                  <img src={car.image} alt={car.name} className={s.car_image} />
-                <h3 className={s.car_name}>{car.name}</h3>
+                 <h3 className={s.car_name}>{car.name}</h3>
+                 </div>
+                <p>{car.about}</p>
                </div>
                <div className={s.line}></div>
                 <div className={s.add_info}>
                
                 <div className={s.prices}>
                           <p className={s.price}>{car.price}</p>{" "}
+                          <s className={s.oldPrice} >{car.oldPrice}</s>
                         </div>
                 <Link to={`/carPage/${car.id}`}>
                   <Btn>Rent now</Btn>

@@ -1,6 +1,6 @@
 // App.js
 import React from "react";
-import "./Admin.scss";
+import "./Admin.module.scss";
 
 const Admin = () => {
   return (
