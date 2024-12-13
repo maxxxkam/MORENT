@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Products from "/public/products.json";
 import Btn from "../btn/Btn";
 import Modal from "../modal/Modal";
+import Reviews from "../Reviews/Reviews";
 
 const SingleCar = () => {
   const { id } = useParams();
@@ -113,7 +114,7 @@ const SingleCar = () => {
                     </div>
                   </div>
                 </div>
-                <Link to={'/Admin'}>
+                <Link to={'/admin'}>
                   <Btn>Rent now</Btn>
                 </Link>
               </div>
@@ -121,6 +122,8 @@ const SingleCar = () => {
           </div>
         </div>
       </section>
+
+      <Reviews/>
     </>
   );
 };

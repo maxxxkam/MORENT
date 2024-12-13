@@ -2,6 +2,7 @@ import React from "react";
 import s from "./Hero.module.scss";
 import Btn from "../btn/Btn";
 import Btn2 from "../Btn2/Btn2";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -16,7 +17,9 @@ const Hero = () => {
                   Ease of doing a car rental safely and reliably. Of course at a
                   low price.
                 </p>
+                <Link>
                 <Btn>Rental  car</Btn>
+                </Link>
               </div>
             </div>
             <div className={s.card}>
@@ -27,7 +30,9 @@ const Hero = () => {
                   facilities.
                 </p>
                 
-                <Btn2>Rental car</Btn2>
+               <Link>
+               <Btn2>Rental car</Btn2>
+               </Link>
               </div>
             </div>
           </div>

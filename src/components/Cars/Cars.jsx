@@ -23,7 +23,7 @@ const CarList = () => {
             <CarCard key={car.id} car={car} />
           ))}
         </div>
-        <button onClick={toggleCount}>more</button>
+        <button className={s.moreBtn} onClick={toggleCount}>more</button>
       </div>
     </section>
   );

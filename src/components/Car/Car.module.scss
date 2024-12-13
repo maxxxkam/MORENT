@@ -6,6 +6,7 @@
   background-color: #fff;
   border-radius: 20px;
   max-width: 400px;
+  position: relative;
 
 
   h3{
@@ -57,4 +58,41 @@
 
 .Btn{
   padding: 10px;
+}
+.like_button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.3s ease;
+
+  img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6; // Начальная прозрачность (серый цвет)
+  }
+
+  &:hover img {
+    opacity: 1; // При наведении на иконку, она становится полностью видимой
+  }
+
+  &.liked {
+    img {
+      opacity: 1; // Когда лайкнут, иконка становится яркой
+    }
+  }
+
+  // Серый цвет для невыбранной кнопки
+  img[src*="like-1.svg"] {
+    filter: grayscale(100%);
+  }
+
+  // Красный цвет для выбранной кнопки
+  img[src*="like-2.svg"] {
+    filter: none;
+    transition: filter 0.3s ease;
+  }
 }

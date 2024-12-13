@@ -18,7 +18,9 @@ const Header = () => {
         <button><img src="/filter-img.svg" alt=""/></button>
       </div>
       <div className={`${s.menu}`}>
+        <Link to={'/favorite'} >
         <img src="/Like-img.svg" alt="" />
+        </Link>
         <img src="/Notification-img.svg" alt="" />
         <img src="/Settings-img.svg" alt="" />
         <img src="/Profile-img.svg" alt="" />

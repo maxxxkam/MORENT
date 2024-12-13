@@ -8,6 +8,7 @@ import CarPage from './pages/CarPage'
 import Filter from './pages/Filter'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Admin from './components/Admin/Admin'
+import Favorite from './components/Favorite/Favorite'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
     <Route path="/carPage/:id" element={<CarPage />} />
     <Route path='/filter' element={<Filter/>} />
     <Route path='/admin' element={<Admin/>} />
+    <Route path='/favorite' element={<Favorite/>} />
 
   </Routes>
     <Footer/>

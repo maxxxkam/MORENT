@@ -1,17 +1,19 @@
 .cars{
-  button{
-    padding: 15px;
-    background-color: #3563E9;
-    border-radius: 10px;
-    border: none;
-    align-items: center;
-    color: #fff;
-    text-transform: uppercase;
-    margin: 0 auto;
-    display: block;
-    width: max-content;
-    
-  }
+  
+  
+}
+
+.moreBtn{
+  padding: 15px;
+  background-color: #3563E9;
+  border-radius: 10px;
+  border: none;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 auto;
+  display: block;
+  width: max-content;
   
 }
 
@@ -21,6 +23,7 @@
   gap: 16px;
   padding: 20px;
   background-color: #f9f9f9;
+  
 }
 .top{
   display: flex;
