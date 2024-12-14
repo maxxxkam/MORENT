@@ -1,0 +1,38 @@
+/* Заголовок */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #002244; /* Темный оттенок синего */
+}
+
+/* Параграф */
+p {
+  font-size: 16px;
+  color: #004488; /* Чуть светлее для акцента */
+  margin-bottom: 20px;
+}
+
+/* Список */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Элементы списка */
+li {
+  font-size: 14px;
+  color: #0055aa; /* Акцентный синий */
+  margin-bottom: 10px;
+  background-color: #e6f2ff; /* Светло-голубой фон */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #cce0ff; /* Голубая рамка */
+}
+
+/* Ховер эффект для элементов списка */
+li:hover {
+  background-color: #d4eaff; /* Более насыщенный голубой */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

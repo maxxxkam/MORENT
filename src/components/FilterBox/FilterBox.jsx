@@ -11,6 +11,24 @@ const FilterBox = ({
   maxPrice,
   setMaxPrice,
 }) => {
+  // Проверка, что данные правильно передаются в компонент
+  console.log("Filter data:", categories, selectedCategories, seatOptions, selectedSeats, maxPrice);
+
+  // Функция для изменения категории
+  const handleCategoryChange = (category) => {
+    toggleCategory(category);
+  };
+
+  // Функция для изменения вместимости
+  const handleSeatChange = (seat) => {
+    toggleSeats(seat);
+  };
+
+  // Функция для изменения максимальной цены
+  const handlePriceChange = (e) => {
+    setMaxPrice(Number(e.target.value));
+  };
+
   return (
     <section className={s.filterSection}>
       <div className="container">
@@ -19,16 +37,20 @@ const FilterBox = ({
           <div className={s.filterWrap}>
             <div className={s.filterGroup}>
               <h4>Type</h4>
-              {categories.map((category) => (
-                <label key={category}>
-                  <input
-                    type="checkbox"
-                    checked={selectedCategories.includes(category)}
-                    onChange={() => toggleCategory(category)}
-                  />
-                  <p>{category}</p>
-                </label>
-              ))}
+              {categories && categories.length > 0 ? (
+                categories.map((category) => (
+                  <label key={category}>
+                    <input
+                      type="checkbox"
+                      checked={selectedCategories.includes(category)}
+                      onChange={() => handleCategoryChange(category)}
+                    />
+                    <p>{category}</p>
+                  </label>
+                ))
+              ) : (
+                <p>No categories available</p>
+              )}
             </div>
           </div>
 
@@ -36,16 +58,20 @@ const FilterBox = ({
           <div className={s.filterGroup}>
             <h4>Capacity</h4>
             <div className={s.filterWrap2}>
-              {seatOptions.map((seat) => (
-                <label className={s.fill} key={seat}>
-                  <input
-                    type="checkbox"
-                    checked={selectedSeats.includes(seat)}
-                    onChange={() => toggleSeats(seat)}
-                  />
-                  <p>{seat}</p>
-                </label>
-              ))}
+              {seatOptions && seatOptions.length > 0 ? (
+                seatOptions.map((seat) => (
+                  <label className={s.fill} key={seat}>
+                    <input
+                      type="checkbox"
+                      checked={selectedSeats.includes(seat)}
+                      onChange={() => handleSeatChange(seat)}
+                    />
+                    <p>{seat}</p>
+                  </label>
+                ))
+              ) : (
+                <p>No seat options available</p>
+              )}
             </div>
           </div>
 
@@ -57,7 +83,7 @@ const FilterBox = ({
               min="0"
               max="200"
               value={maxPrice}
-              onChange={(e) => setMaxPrice(Number(e.target.value))}
+              onChange={handlePriceChange}
             />
             <p>Max: ${maxPrice}</p>
           </div>

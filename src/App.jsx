@@ -9,6 +9,7 @@ import Filter from './pages/Filter'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Admin from './components/Admin/Admin'
 import Favorite from './components/Favorite/Favorite'
+import Notification from './components/Notification/Notification'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
     <Route path='/filter' element={<Filter/>} />
     <Route path='/admin' element={<Admin/>} />
     <Route path='/favorite' element={<Favorite/>} />
+    <Route path='/notification' element={<Notification/>}/>
 
   </Routes>
     <Footer/>

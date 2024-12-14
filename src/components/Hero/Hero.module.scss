@@ -32,15 +32,13 @@
       // font-size: 32px;
       font-size: clamp(1rem, 0.609rem + 1.6vw, 1.813rem);
       font-weight: 400;
+      color: #fff;
     }
 
   }
-
-  h2{
-    color: #fff;
-
-  }
-
+p{
+  color: #fff;
+}
   &:nth-child(2){
     background-image: url(/hero-card-img1.png);
     background-color: #3563E9;

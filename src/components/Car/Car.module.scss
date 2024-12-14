@@ -68,6 +68,9 @@
   cursor: pointer;
   padding: 5px;
   transition: all 0.3s ease;
+  &:active{
+    scale: 1.2;
+  }
 
   img {
     width: 24px;

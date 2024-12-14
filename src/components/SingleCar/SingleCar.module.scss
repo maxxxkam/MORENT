@@ -82,6 +82,7 @@
 
   p {
     max-width: 280px;
+    color: #fff;
   }
 
   img {
@@ -147,11 +148,15 @@
 .rating {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  justify-items: center;
+
+  
+  
 
   cursor: pointer;
   p {
     margin-right: 10px;
+    margin-bottom: 0;
   }
 
   .star {
@@ -159,6 +164,7 @@
     cursor: pointer;
     color: gray;
     margin-right: 5px;
+    
 
     &:hover {
       color: gold;
