@@ -1,8 +1,3 @@
-.cars{
-  
-  
-}
-
 .moreBtn{
   padding: 15px;
   background-color: #3563E9;
@@ -14,6 +9,14 @@
   margin: 0 auto;
   display: block;
   width: max-content;
+  transition: 0.3s;
+  &:hover{
+    background-color: #466febd4;
+  }
+
+  &:active{
+    scale: 1.2;
+  }
   
 }
 

@@ -4,7 +4,7 @@ import s from './Notification.module.scss'
 const Notification = () => {
   return (
     <>
-    <div>
+    <div className={s.wrapper} >
   <h1>No Notifications</h1>
   <p>It looks like you are all caught up! Here are some tips for today:</p>
   <ul>

@@ -12,6 +12,48 @@
   padding: 20px;
   border-radius: 20px;
   gap: 40px;
+  position: relative;
+}
+
+.like_button {
+  position: absolute;
+  top: 2px; /* Расстояние от верхнего края */
+  right: 10px; /* Расстояние от правого края */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.3s ease;
+  
+
+  &:active {
+    scale: 1.2;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6; /* Начальная прозрачность (серый цвет) */
+  }
+
+  &:hover img {
+    opacity: 1; /* При наведении на иконку, она становится полностью видимой */
+  }
+
+  &.liked img {
+    opacity: 1; /* Когда лайкнуто, иконка становится яркой */
+  }
+
+  /* Серый цвет для невыбранной кнопки */
+  img[src*="like-1.svg"] {
+    filter: grayscale(100%);
+  }
+
+  /* Красный цвет для выбранной кнопки */
+  img[src*="like-2.svg"] {
+    filter: none;
+    transition: filter 0.3s ease;
+  }
 }
 
 .main_info{
