@@ -13,12 +13,13 @@
   border-radius: 20px;
   gap: 40px;
   position: relative;
+  padding-top: 20px;
 }
 
 .like_button {
   position: absolute;
-  top: 2px; /* Расстояние от верхнего края */
-  right: 10px; /* Расстояние от правого края */
+  top: -20px; /* Расстояние от верхнего края */
+  right: -14px; /* Расстояние от правого края */
   background: none;
   border: none;
   cursor: pointer;

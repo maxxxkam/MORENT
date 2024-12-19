@@ -10,6 +10,7 @@ import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Admin from './components/Admin/Admin'
 import Favorite from './components/Favorite/Favorite'
 import Notification from './components/Notification/Notification'
+import How from './components/How/How'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
     <Route path='/admin' element={<Admin/>} />
     <Route path='/favorite' element={<Favorite/>} />
     <Route path='/notification' element={<Notification/>}/>
+    <Route path='/howpage' element={<How/>} />
 
   </Routes>
     <Footer/>

@@ -9,7 +9,7 @@ const PickUp = () => {
     "pickup-time": "",
     "dropoff-locations": "",
     "dropoff-date": "",
-    "dropoff-time": ""
+    "dropoff-time": "",
   });
 
   const toggleSection = (section) => {
@@ -19,52 +19,71 @@ const PickUp = () => {
   const handleSelect = (section, value) => {
     setSelectedValues((prev) => ({
       ...prev,
-      [section]: value
+      [section]: value,
     }));
-    setExpandedSection(null); // Закрываем выпадающий список после выбора
+    setExpandedSection(null); // Close the dropdown after selection
   };
 
-  // Функция отправки данных формы в Telegram бот
+  // Function to generate drop-off dates based on pick-up date
+  const generateDropOffDates = (pickupDate) => {
+    if (!pickupDate) return [];
+    const baseDate = new Date(pickupDate);
+
+    const addDays = (days) => {
+      const newDate = new Date(baseDate);
+      newDate.setDate(newDate.getDate() + days);
+      return newDate.toISOString().split("T")[0]; // Format as YYYY-MM-DD
+    };
+
+    return [addDays(1), addDays(3), addDays(7)];
+  };
+
+  const dropOffDates = generateDropOffDates(selectedValues["pickup-date"]);
+
+  // Function to send form data to the Telegram bot
   const handleSubmit = async () => {
-    const botToken = "7629587294:AAFjAEmnzYc06BtG9OoUQYSctKxCSiFjTb4"; // Замените на ваш токен бота
-    const chatId = "-4799118768"; // Замените на ID чата или группы
+    const botToken = "7629587294:AAFjAEmnzYc06BtG9OoUQYSctKxCSiFjTb4"; // Replace with your bot token
+    const chatId = "-4799118768"; // Replace with your chat or group ID
 
-    // Форматируем сообщение с выбранными значениями
+    // Format the message with selected values
     const message = `
-      *Детали Pick-Up:*
-      - Локация: ${selectedValues["pickup-locations"] || "Не выбрана"}
-      - Дата: ${selectedValues["pickup-date"] || "Не выбрана"}
-      - Время: ${selectedValues["pickup-time"] || "Не выбрано"}
+*Pick-Up Details:*
+- Location: ${selectedValues["pickup-locations"] || "Not selected"}
+- Date: ${selectedValues["pickup-date"] || "Not selected"}
+- Time: ${selectedValues["pickup-time"] || "Not selected"}
 
-      *Детали Drop-Off:*
-      - Локация: ${selectedValues["dropoff-locations"] || "Не выбрана"}
-      - Дата: ${selectedValues["dropoff-date"] || "Не выбрана"}
-      - Время: ${selectedValues["dropoff-time"] || "Не выбрано"}
+*Drop-Off Details:*
+- Location: ${selectedValues["dropoff-locations"] || "Not selected"}
+- Date: ${selectedValues["dropoff-date"] || "Not selected"}
+- Time: ${selectedValues["dropoff-time"] || "Not selected"}
     `;
 
-    // Отправляем сообщение в Telegram бот
+    // Send the message to the Telegram bot
     try {
-      const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: message,
-          parse_mode: "Markdown"
-        })
-      });
+      const response = await fetch(
+        `https://api.telegram.org/bot${botToken}/sendMessage`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+            parse_mode: "Markdown",
+          }),
+        }
+      );
 
       const result = await response.json();
       if (result.ok) {
-        alert("Данные успешно отправлены!");
+        alert("Data sent successfully!");
       } else {
-        alert("Не удалось отправить данные. Попробуйте снова.");
+        alert("Failed to send data. Please try again.");
       }
     } catch (error) {
-      console.error("Ошибка при отправке сообщения:", error);
-      alert("Ошибка при отправке данных. Попробуйте снова.");
+      console.error("Error sending message:", error);
+      alert("Error sending data. Please try again.");
     }
   };
 
@@ -73,141 +92,260 @@ const PickUp = () => {
       <div className="container">
         <div className={s.wrapper}>
           <div className={s.cards}>
+            {/* Pick-Up Section */}
             <div className={s.card}>
               <p>
                 <img src="/PickUp-img1.svg" alt="" /> Pick - Up
               </p>
               <div className={s.info}>
-                {/* Локации */}
+                {/* Locations */}
                 <div>
-                  <b>Локации</b>
+                  <b>Locations</b>
                   <p onClick={() => toggleSection("pickup-locations")}>
-                    {selectedValues["pickup-locations"] || "Выберите ваш город"}{" "}
+                    {selectedValues["pickup-locations"] || "Select your city"}{" "}
                     <img
                       src="/arrow-down.svg"
                       alt=""
-                      className={expandedSection === "pickup-locations" ? s.expanded : ""}
+                      className={
+                        expandedSection === "pickup-locations" ? s.expanded : ""
+                      }
                     />
                   </p>
                   {expandedSection === "pickup-locations" && (
                     <div className={s.dropdown}>
-                      <p onClick={() => handleSelect("pickup-locations", "Ташкент")}>Ташкент</p>
-                      <p onClick={() => handleSelect("pickup-locations", "Бухара")}>Бухара</p>
-                      <p onClick={() => handleSelect("pickup-locations", "Самарканд")}>Самарканд</p>
+                      <p
+                        onClick={() =>
+                          handleSelect("pickup-locations", "Tashkent")
+                        }
+                      >
+                        Tashkent
+                      </p>
+                      <p
+                        onClick={() =>
+                          handleSelect("pickup-locations", "Bukhara")
+                        }
+                      >
+                        Bukhara
+                      </p>
+                      <p
+                        onClick={() =>
+                          handleSelect("pickup-locations", "Samarkand")
+                        }
+                      >
+                        Samarkand
+                      </p>
                     </div>
                   )}
                 </div>
                 <div className={s.line}></div>
 
-                {/* Дата */}
+                {/* Date */}
                 <div>
-                  <b>Дата</b>
+                  <b>Date</b>
                   <p onClick={() => toggleSection("pickup-date")}>
-                    {selectedValues["pickup-date"] || "Выберите дату"}{" "}
+                    {selectedValues["pickup-date"] || "Select a date"}{" "}
                     <img
                       src="/arrow-down.svg"
                       alt=""
-                      className={expandedSection === "pickup-date" ? s.expanded : ""}
+                      className={
+                        expandedSection === "pickup-date" ? s.expanded : ""
+                      }
                     />
                   </p>
                   {expandedSection === "pickup-date" && (
                     <div className={s.dropdown}>
-                      <p onClick={() => handleSelect("pickup-date", "12/18/2024")}>12/18/2024</p>
-                      <p onClick={() => handleSelect("pickup-date", "12/19/2024")}>12/19/2024</p>
-                      <p onClick={() => handleSelect("pickup-date", "12/20/2024")}>12/20/2024</p>
+                      <p
+                        onClick={() =>
+                          handleSelect("pickup-date", "2024-12-18")
+                        }
+                      >
+                        2024-12-18
+                      </p>
+                      <p
+                        onClick={() =>
+                          handleSelect("pickup-date", "2024-12-19")
+                        }
+                      >
+                        2024-12-19
+                      </p>
+                      <p
+                        onClick={() =>
+                          handleSelect("pickup-date", "2024-12-20")
+                        }
+                      >
+                        2024-12-20
+                      </p>
                     </div>
                   )}
                 </div>
                 <div className={s.line}></div>
 
-                {/* Время */}
+                {/* Time */}
                 <div>
-                  <b>Время</b>
+                  <b>Time</b>
                   <p onClick={() => toggleSection("pickup-time")}>
-                    {selectedValues["pickup-time"] || "Выберите время"}{" "}
+                    {selectedValues["pickup-time"] || "Select a time"}{" "}
                     <img
                       src="/arrow-down.svg"
                       alt=""
-                      className={expandedSection === "pickup-time" ? s.expanded : ""}
+                      className={
+                        expandedSection === "pickup-time" ? s.expanded : ""
+                      }
                     />
                   </p>
                   {expandedSection === "pickup-time" && (
                     <div className={s.dropdown}>
-                      <p onClick={() => handleSelect("pickup-time", "10:00 AM")}>10:00 AM</p>
-                      <p onClick={() => handleSelect("pickup-time", "2:00 PM")}>2:00 PM</p>
-                      <p onClick={() => handleSelect("pickup-time", "6:00 PM")}>6:00 PM</p>
+                      <p
+                        onClick={() =>
+                          handleSelect("pickup-time", "10:00 AM")
+                        }
+                      >
+                        10:00 AM
+                      </p>
+                      <p
+                        onClick={() =>
+                          handleSelect("pickup-time", "2:00 PM")
+                        }
+                      >
+                        2:00 PM
+                      </p>
+                      <p
+                        onClick={() =>
+                          handleSelect("pickup-time", "6:00 PM")
+                        }
+                      >
+                        6:00 PM
+                      </p>
                     </div>
                   )}
                 </div>
               </div>
             </div>
+
             <button className={s.btn} onClick={handleSubmit}>
               <img src="/arrows-img.svg" alt="" />
             </button>
+
             {/* Drop-Off Section */}
             <div className={s.card}>
               <p>
                 <img src="/PickUp-img1.svg" alt="" /> Drop - Off
               </p>
               <div className={s.info}>
-                {/* Локации */}
+                {/* Locations */}
                 <div>
-                  <b>Локации</b>
+                  <b>Locations</b>
                   <p onClick={() => toggleSection("dropoff-locations")}>
-                    {selectedValues["dropoff-locations"] || "Выберите ваш город"}{" "}
+                    {selectedValues["dropoff-locations"] || "Select your city"}{" "}
                     <img
                       src="/arrow-down.svg"
                       alt=""
-                      className={expandedSection === "dropoff-locations" ? s.expanded : ""}
+                      className={
+                        expandedSection === "dropoff-locations"
+                          ? s.expanded
+                          : ""
+                      }
                     />
                   </p>
                   {expandedSection === "dropoff-locations" && (
                     <div className={s.dropdown}>
-                      <p onClick={() => handleSelect("dropoff-locations", "Ташкент")}>Ташкент</p>
-                      <p onClick={() => handleSelect("dropoff-locations", "Бухара")}>Бухара</p>
-                      <p onClick={() => handleSelect("dropoff-locations", "Самарканд")}>Самарканд</p>
+                      <p
+                        onClick={() =>
+                          handleSelect("dropoff-locations", "Tashkent")
+                        }
+                      >
+                        Tashkent
+                      </p>
+                      <p
+                        onClick={() =>
+                          handleSelect("dropoff-locations", "Bukhara")
+                        }
+                      >
+                        Bukhara
+                      </p>
+                      <p
+                        onClick={() =>
+                          handleSelect("dropoff-locations", "Samarkand")
+                        }
+                      >
+                        Samarkand
+                      </p>
                     </div>
                   )}
                 </div>
                 <div className={s.line}></div>
 
-                {/* Дата */}
+                {/* Date */}
                 <div>
-                  <b>Дата</b>
+                  <b>Date</b>
                   <p onClick={() => toggleSection("dropoff-date")}>
-                    {selectedValues["dropoff-date"] || "Выберите дату"}{" "}
+                    {selectedValues["dropoff-date"] || "Select a date"}{" "}
                     <img
                       src="/arrow-down.svg"
                       alt=""
-                      className={expandedSection === "dropoff-date" ? s.expanded : ""}
+                      className={
+                        expandedSection === "dropoff-date"
+                          ? s.expanded
+                          : ""
+                      }
                     />
                   </p>
-                  {expandedSection === "dropoff-date" && (
-                    <div className={s.dropdown}>
-                      <p onClick={() => handleSelect("dropoff-date", "12/21/2024")}>12/21/2024</p>
-                      <p onClick={() => handleSelect("dropoff-date", "12/22/2024")}>12/22/2024</p>
-                      <p onClick={() => handleSelect("dropoff-date", "12/23/2024")}>12/23/2024</p>
-                    </div>
-                  )}
+                  {expandedSection === "dropoff-date" &&
+                    dropOffDates.length > 0 && (
+                      <div className={s.dropdown}>
+                        {dropOffDates.map((date) => (
+                          <p
+                            key={date}
+                            onClick={() =>
+                              handleSelect("dropoff-date", date)
+                            }
+                          >
+                            {date}
+                          </p>
+                        ))}
+                      </div>
+                    )}
                 </div>
                 <div className={s.line}></div>
 
-                {/* Время */}
+                {/* Time */}
                 <div>
-                  <b>Время</b>
+                  <b>Time</b>
                   <p onClick={() => toggleSection("dropoff-time")}>
-                    {selectedValues["dropoff-time"] || "Выберите время"}{" "}
+                    {selectedValues["dropoff-time"] || "Select a time"}{" "}
                     <img
                       src="/arrow-down.svg"
                       alt=""
-                      className={expandedSection === "dropoff-time" ? s.expanded : ""}
+                      className={
+                        expandedSection === "dropoff-time"
+                          ? s.expanded
+                          : ""
+                      }
                     />
                   </p>
                   {expandedSection === "dropoff-time" && (
                     <div className={s.dropdown}>
-                      <p onClick={() => handleSelect("dropoff-time", "8:00 AM")}>8:00 AM</p>
-                      <p onClick={() => handleSelect("dropoff-time", "12:00 PM")}>12:00 PM</p>
-                      <p onClick={() => handleSelect("dropoff-time", "4:00 PM")}>4:00 PM</p>
+                      <p
+                        onClick={() =>
+                          handleSelect("dropoff-time", "8:00 AM")
+                        }
+                      >
+                        8:00 AM
+                      </p>
+                      <p
+                        onClick={() =>
+                          handleSelect("dropoff-time", "12:00 PM")
+                        }
+                      >
+                        12:00 PM
+                      </p>
+                      <p
+                        onClick={() =>
+                          handleSelect("dropoff-time", "4:00 PM")
+                        }
+                      >
+                        4:00 PM
+                      </p>
                     </div>
                   )}
                 </div>
@@ -220,4 +358,4 @@ const PickUp = () => {
   );
 };
 
-export default PickUp;
+export default PickUp 
