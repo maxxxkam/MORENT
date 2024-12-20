@@ -11,6 +11,7 @@ import Admin from './components/Admin/Admin'
 import Favorite from './components/Favorite/Favorite'
 import Notification from './components/Notification/Notification'
 import How from './components/How/How'
+import Events from './components/Events/Events'
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
     <Route path='/favorite' element={<Favorite/>} />
     <Route path='/notification' element={<Notification/>}/>
     <Route path='/howpage' element={<How/>} />
+    <Route path='/eventsPage' element={<Events/>} />
 
   </Routes>
     <Footer/>

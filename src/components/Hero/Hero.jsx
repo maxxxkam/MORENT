@@ -17,7 +17,7 @@ const Hero = () => {
                   Ease of doing a car rental safely and reliably. Of course at a
                   low price.
                 </p>
-                <Link>
+                <Link to={'/carPage/1'} >
                 <Btn>Rental  car</Btn>
                 </Link>
               </div>
@@ -30,7 +30,7 @@ const Hero = () => {
                   facilities.
                 </p>
                 
-               <Link>
+               <Link to={'/carPage/2'} >
                <Btn2>Rental car</Btn2>
                </Link>
               </div>

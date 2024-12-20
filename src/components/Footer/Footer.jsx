@@ -10,7 +10,9 @@ const Footer = () => {
         <div className="container">
             <div className={s.wrapper}>
                 <div className={s.box1}>
+                <Link to={'/'}>
                 <SectionTitle>MORANT</SectionTitle>
+                </Link>
                 <p>Our vision is to provide convenience and help increase your sales business.</p>
                 </div>
                 <div className={s.box}>
@@ -25,7 +27,9 @@ const Footer = () => {
                 
                 <div className={s.box}>
                     <h2>Community</h2>
-                    <a>Events</a>
+                    <Link to={'/eventsPage'}>
+                    Events
+                    </Link>
                     <a target='blanck' href='https://www.youtube.com/@Ja_Morant/videos' >Blog</a>
                     <a target='blanck' href='https://www.youtube.com/watch?v=SMi5p7W-BNo' >Podcast</a>
                     <a>Invite a friend</a>
