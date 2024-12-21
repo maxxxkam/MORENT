@@ -12,6 +12,7 @@ import Favorite from './components/Favorite/Favorite'
 import Notification from './components/Notification/Notification'
 import How from './components/How/How'
 import Events from './components/Events/Events'
+import Setings from './components/Setings/Setings'
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
     <Route path='/notification' element={<Notification/>}/>
     <Route path='/howpage' element={<How/>} />
     <Route path='/eventsPage' element={<Events/>} />
+    <Route path='/setings' element={<Setings/>} />
 
   </Routes>
     <Footer/>

@@ -1,37 +1,51 @@
-h1 {
+.wrapper {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
   font-size: 24px;
-  margin-bottom: 20px;
-  color: #002244; /* Темный оттенок синего */
-}
-
-/* Параграф */
-p {
-  font-size: 16px;
-  color: #004488; /* Чуть светлее для акцента */
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
-/* Список */
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.notification {
+  background: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Элементы списка */
-li {
+.notificationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notificationDate {
   font-size: 14px;
-  color: #0055aa; /* Акцентный синий */
-  margin-bottom: 10px;
-  background-color: #e6f2ff; /* Светло-голубой фон */
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #cce0ff; /* Голубая рамка */
+  color: #888;
 }
 
-/* Ховер эффект для элементов списка */
-li:hover {
-  background-color: #d4eaff; /* Более насыщенный голубой */
+.notificationDescription {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }

@@ -39,7 +39,7 @@ const Header = () => {
   };
 
   return (
-    <header className={s.header}>
+    <header id="featured" className={s.header}>
       <div className="container">
         <div className={s.wrapper}>
           <div className={s.box}>
@@ -76,11 +76,13 @@ const Header = () => {
                   <p>У вас новое сообщение</p>
                   <p>Ваша бронь подтверждена</p>
                   <p>Запланировано техническое обслуживание</p>
-                  <Link to={"/notification"}>Посмотреть все уведомления</Link>
+                  <Link onClick={toggleDropdown} to={"/notification"}>Посмотреть все уведомления</Link>
                 </div>
               )}
             </div>
-            <img src="/Settings-img.svg" alt="" />
+           <Link to={'/setings'} >
+           <img src="/Settings-img.svg" alt="" />
+           </Link>
             <img src="/Profile-img.svg" alt="" />
           </div>
           <div

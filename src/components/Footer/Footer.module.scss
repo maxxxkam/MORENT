@@ -2,6 +2,7 @@
     margin-top: 40px;
     padding: 30px;
     background-color: #fff;
+    position: relative;
 }
 
 .wrapper{
@@ -30,6 +31,7 @@
     display: flex;
     flex-direction: column;
     gap: 23px;
+
     h2{
         color: #000;
         font-weight: 400;
@@ -47,6 +49,10 @@
    
 }
 
+.openModal{
+    background-color: #fff;
+    position: absolute;
+}
 
 .line{
     margin-top: 20px;
@@ -69,3 +75,101 @@
        text-align: center;
     }
 }
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .partners {
+    display: flex;
+    // flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .partnerItem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    a{
+        text-decoration: none;
+        color: #000;
+        &:hover{
+            text-decoration: underline;
+            color: gray;
+        }
+    }
+  }
+  
+  .partnerItem img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+.formGroup{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    input{
+        border-radius: 10px;
+        padding: 12px;
+    }
+}
+
+.modalContent_2 {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+.formGroupse{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
