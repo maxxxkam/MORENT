@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from './Reviews.module.scss';
 import reviews from '/public/comments.json'; // Убедитесь, что путь к файлу правильный
+
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+
 
 const Reviews = () => {
   const [showAll, setShowAll] = useState(false); // Состояние для управления отображением всех отзывов
@@ -8,6 +12,11 @@ const Reviews = () => {
   const toggleReviews = () => {
     setShowAll(!showAll); // Переключаем состояние при клике на кнопку
   };
+
+   useEffect(() => {
+      AOS.init({ duration: 500 }); 
+    }, []);
+  
 
   return (
     <div className={s.reviewsSection}>
@@ -18,7 +27,7 @@ const Reviews = () => {
         </div>
         <div className={s.reviewsList}>
           {(showAll ? reviews : reviews.slice(0, 2)).map((review) => (
-            <div key={review.id} className={s.reviewCard}>
+            <div key={review.id} className={s.reviewCard}  data-aos="flip-up" >
               <img
                 src={review.image}
                 alt={review.name}

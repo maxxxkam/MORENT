@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./PickUp.module.scss";
+
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 const PickUp = () => {
   const [expandedSection, setExpandedSection] = useState(null);
@@ -87,13 +90,17 @@ const PickUp = () => {
     }
   };
 
+   useEffect(() => {
+      AOS.init({ duration: 1000 }); 
+    }, []);
+
   return (
     <section className={s.PickUp}>
       <div className="container">
         <div className={s.wrapper}>
           <div className={s.cards}>
             {/* Pick-Up Section */}
-            <div className={s.card}>
+            <div className={s.card} data-aos="fade-right" data-aos-delay='200' >
               <p>
                 <img src="/PickUp-img1.svg" alt="" /> Pick - Up
               </p>
@@ -222,12 +229,12 @@ const PickUp = () => {
               </div>
             </div>
 
-            <button className={s.btn} onClick={handleSubmit}>
+            <button data-aos="fade-down" data-aos-delay='400' className={s.btn} onClick={handleSubmit}>
               <img src="/arrows-img.svg" alt="" />
             </button>
 
             {/* Drop-Off Section */}
-            <div className={s.card}>
+            <div className={s.card} data-aos="fade-left" data-aos-delay='200' >
               <p>
                 <img src="/PickUp-img1.svg" alt="" /> Drop - Off
               </p>

@@ -3,6 +3,9 @@ import s from "./Car.module.scss";
 import Btn from "../btn/Btn";
 import { Link } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+
 const CarCard = ({ car }) => {
   const [isFavorite, setIsFavorite] = useState(false); // Состояние лайка
 
@@ -30,8 +33,13 @@ const CarCard = ({ car }) => {
     setIsFavorite(!isFavorite);
   };
 
+  useEffect(() => {
+      AOS.init({ duration: 500 }); 
+    }, []);
+  
+
   return (
-    <div className={s.car_card}>
+    <div className={s.car_card} data-aos="fade-up" >
       <h3 className={s.car_name}>{car.name}</h3>
       <p className={s.car_category}>{car.category}</p>
       <img src={car.image} alt={car.name} className={s.car_image} />

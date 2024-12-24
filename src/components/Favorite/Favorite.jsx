@@ -3,6 +3,9 @@ import s from './Favorite.module.scss';
 import { Link } from "react-router-dom";
 import Btn from "../btn/Btn"; // Ваши компоненты кнопок и другие элементы
 
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+
 const Favorite = () => {
   const [favoriteCars, setFavoriteCars] = useState([]);
 
@@ -29,6 +32,10 @@ const Favorite = () => {
     setFavoriteCars(updatedFavorites);
   };
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); 
+  }, []);
+
   return (
     <section className={s.favorite}>
       <div className="container">
@@ -37,8 +44,13 @@ const Favorite = () => {
           <p>No favorite cars yet</p>
         ) : (
           <div className={s.favorite_list}>
-            {favoriteCars.map((car) => (
-              <div key={car.id} className={s.favorite_car}>
+            {favoriteCars.map((car, index) => (
+              <div
+                key={car.id}
+                className={s.favorite_car}
+                data-aos="flip-right"  // Анимация для карточки
+                data-aos-delay={index * 200} // Задержка для каждого элемента
+              >
                 <div className={s.main_info}>
                   <div className={s.name_a_img}>
                     <img src={car.image} alt={car.name} className={s.car_image} />

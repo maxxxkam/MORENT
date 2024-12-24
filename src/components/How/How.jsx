@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import s from "./How.module.scss";
 import { Link } from "react-router-dom";
 import Btn2 from "../Btn2/Btn2";
 
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+
 const How = () => {
+
+   useEffect(() => {
+      AOS.init({ duration: 1000 }); 
+    }, []);
   return (
     <>
       <section className={s.how}>
@@ -16,7 +23,7 @@ const How = () => {
 
           <div className={s.wrapper}>
             <div className={s.steps}>
-              <section className={`${s.step_1} ${s.step}`}>
+              <section className={`${s.step_1} ${s.step}`} data-aos="fade-down" data-aos-delay='200' >
                 <h2>Step 1: Choose Your Car</h2>
                 <p>
                   Browse our extensive fleet of vehicles. Use the filters to
@@ -28,7 +35,7 @@ const How = () => {
                 />
               </section>
 
-              <section className={`${s.step_2} ${s.step}`}>
+              <section className={`${s.step_2} ${s.step}`} data-aos="fade-down" data-aos-delay='400' >
                 <h2>Step 2: Specify Dates and Times</h2>
                 <p>
                   Select the date and time for pickup and drop-off. Make sure to
@@ -40,7 +47,7 @@ const How = () => {
                 />
               </section>
 
-              <section className={`${s.step_3} ${s.step}`}>
+              <section className={`${s.step_3} ${s.step}`} data-aos="fade-down" data-aos-delay='600' >
                 <h2>Step 3: Fill in Driver Information</h2>
                 <p>
                   Provide your driver's license details and any additional
@@ -52,7 +59,7 @@ const How = () => {
                 />
               </section>
 
-              <section className={`${s.step_4} ${s.step}`}>
+              <section className={`${s.step_4} ${s.step}`} data-aos="fade-down" data-aos-delay='800' >
                 <h2>Step 4: Choose Additional Services</h2>
                 <p>
                   Add extras like GPS, child seats, or insurance for a more
@@ -64,7 +71,7 @@ const How = () => {
                 />
               </section>
 
-              <section className={`${s.step_5} ${s.step}`}>
+              <section className={`${s.step_5} ${s.step}`} data-aos="fade-down" data-aos-delay='1000' >
                 <h2>Step 5: Payment and Confirmation</h2>
                 <p>
                   Complete your booking by making a secure payment. You'll

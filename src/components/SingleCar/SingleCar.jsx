@@ -6,6 +6,9 @@ import Btn from "../btn/Btn";
 import Modal from "../modal/Modal";
 import Reviews from "../Reviews/Reviews";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const SingleCar = () => {
   const { id } = useParams();
   const car = Products.find((product) => product.id === parseInt(id));
@@ -40,6 +43,10 @@ const SingleCar = () => {
     return <p>Машина не найдена</p>;
   }
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       {/* Модальное окно */}
@@ -49,7 +56,12 @@ const SingleCar = () => {
           <div className={s.wrapper}>
             <div className={s.boxes}>
               {/* Левая часть - Изображения */}
-              <div className={s.box}>
+              <div
+                className={s.box}
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-easing="ease-in-sine"
+              >
                 <div className={s.images}>
                   <div className={s.topImage}>
                     <h3 className={s.zagalovok}>
@@ -78,7 +90,13 @@ const SingleCar = () => {
               </div>
 
               {/* Правая часть - Информация */}
-              <div className={`${s.box} ${s.box_2}`}>
+              <div
+                className={`${s.box} ${s.box_2}`}
+                data-aos="fade-left"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="500"
+              >
                 <h1>{car.name}</h1>
                 <div className={s.rating}>
                   <p>Rate this car:</p>
@@ -114,7 +132,7 @@ const SingleCar = () => {
                     </div>
                   </div>
                 </div>
-                <Link to={'/admin'}>
+                <Link to={"/admin"}>
                   <Btn>Rent now</Btn>
                 </Link>
               </div>
@@ -123,7 +141,7 @@ const SingleCar = () => {
         </div>
       </section>
 
-      <Reviews/>
+      <Reviews />
     </>
   );
 };

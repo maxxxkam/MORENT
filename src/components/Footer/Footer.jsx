@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './Footer.module.scss';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import { Link } from 'react-router-dom';
 import Btn2 from '../Btn2/Btn2';
+
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 const Footer = () => {
   const [isPartnershipModalOpen, setIsPartnershipModalOpen] = useState(false);
@@ -68,18 +71,22 @@ const Footer = () => {
       });
   };
 
+   useEffect(() => {
+      AOS.init({ duration: 1000 }); 
+    }, []);
+
   return (
     <>
       <footer className={s.footer}>
         <div className="container">
           <div className={s.wrapper}>
-            <div className={s.box1}>
+            <div className={s.box1} data-aos="flip-right" data-aos-delay='200' >
               <Link to={'/'}>
                 <SectionTitle>MORANT</SectionTitle>
               </Link>
               <p>Our vision is to provide convenience and help increase your sales business.</p>
             </div>
-            <div className={s.box}>
+            <div className={s.box} data-aos="flip-left" data-aos-delay='400' >
               <h2>About</h2>
               <Link to={"/howpage"}>How it works</Link>
               <a href='/#featured'>Featured</a>
@@ -87,7 +94,7 @@ const Footer = () => {
               <a onClick={openBusinessModal} style={{ cursor: 'pointer' }}>Business Relation</a>
             </div>
 
-            <div className={s.box}>
+            <div className={s.box} data-aos="flip-left" data-aos-delay='600' >
               <h2>Community</h2>
               <Link to={'/eventsPage'}>Events</Link>
               <a target='_blank' href='https://www.youtube.com/@Ja_Morant/videos'>Blog</a>
@@ -95,7 +102,7 @@ const Footer = () => {
               <a onClick={copyLinkToClipboard} style={{ cursor: 'pointer' }}>Invite a friend</a> {/* Добавляем функцию здесь */}
             </div>
 
-            <div className={s.box}>
+            <div className={s.box} data-aos="flip-left" data-aos-delay='800' >
               <h2>Socials</h2>
               <a target='_blank' href='https://discord.com/'>Discord</a>
               <a target='_blank' href='https://www.instagram.com/itacademy_uz/?hl=en'>Instagram</a>
@@ -107,10 +114,10 @@ const Footer = () => {
           <div className={s.line}></div>
 
           <div className={s.wrap}>
-            <div className={s.card}>
+            <div className={s.card}  >
               <b>©2022 MORENT. All rights reserved</b>
             </div>
-            <div className={s.card}>
+            <div className={s.card}  >
               <b>Privacy & Policy</b>
               <b>Terms & Condition</b>
             </div>

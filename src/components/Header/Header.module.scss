@@ -63,6 +63,7 @@
 .menu {
   display: flex;
   gap: 10px;
+  position: relative;
 
   @media (max-width: 760px) {
     :nth-child(1),
@@ -70,14 +71,6 @@
     :nth-child(3) {
       display: none;
     }
-  }
-}
-
-.notification {
-  position: relative;
-
-  .notificationIcon {
-    cursor: pointer;
   }
 
   .dropdown {
@@ -113,6 +106,19 @@
       &:hover {
         background-color: #f9f9f9;
       }
+    
+}
+
+.notification {
+  position: relative;
+
+  .notificationIcon {
+    cursor: pointer;
+  }
+
+  
+
+  
     }
   }
 }

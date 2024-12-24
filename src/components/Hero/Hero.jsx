@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import s from "./Hero.module.scss";
 import Btn from "../btn/Btn";
 import Btn2 from "../Btn2/Btn2";
 import { Link } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+
 const Hero = () => {
+
+   useEffect(() => {
+      AOS.init({ duration: 1000 }); 
+    }, []);
+
   return (
     <>
       <section  className={s.hero}>
         <div className="container">
           <div className={s.wrapper}>
-            <div className={s.card}>
+            <div className={s.card} data-aos="flip-left">
               <div>
                 <h2>The Best Platform for Car Rental</h2>
                 <p>
@@ -22,7 +30,7 @@ const Hero = () => {
                 </Link>
               </div>
             </div>
-            <div className={s.card}>
+            <div className={s.card} data-aos="flip-right" >
               <div>
                 <h2>Easy way to rent a car at a low price </h2>
                 <p>
