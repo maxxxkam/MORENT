@@ -48,8 +48,8 @@ const Favorite = () => {
               <div
                 key={car.id}
                 className={s.favorite_car}
-                data-aos="flip-right"  // Анимация для карточки
-                data-aos-delay={index * 200} // Задержка для каждого элемента
+                data-aos="flip-right"  
+                data-aos-delay={index * 200} 
               >
                 <div className={s.main_info}>
                   <div className={s.name_a_img}>
