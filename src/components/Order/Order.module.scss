@@ -1,0 +1,43 @@
+.wrapper{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 64px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: max-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    >p{
+        opacity: 50%;
+
+    }
+    h2{
+        font-weight: 700;
+        font-size: 22px;
+    }
+    img{
+        max-width: 100px;
+        width: 100%;
+    }
+}
+
+.details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    p{
+        font-weight: 700;
+        span{
+            opacity: 60%;
+        }
+    }
+}
+

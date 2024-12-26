@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './Form.module.scss';
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -86,11 +89,19 @@ const Form = () => {
     }
   };
 
+   useEffect(() => {
+             AOS.init({ 
+               duration: 1000,
+                once: true
+       
+              }); 
+           }, []);
+
   return (
     <div className={s.wrapper}>
       <div className={s.formContainer}>
         {/* Step 1: Billing Info */}
-        <section className={s.section}>
+        <section className={s.section} data-aos="fade-up" data-aos-delay="200" >
           <div className={s.wrap}>
             <div className={s.header}>
               <h2>Billing Info</h2>
@@ -146,7 +157,7 @@ const Form = () => {
         </section>
 
         {/* Step 2: Rental Info */}
-        <section className={s.section}>
+        <section className={s.section} data-aos="fade-up" data-aos-delay="400" >
           <div className={s.header}>
             <h2>Rental Info</h2>
             <span>Step 2 of 4</span>
@@ -238,7 +249,7 @@ const Form = () => {
         </section>
 
         {/* Step 3: Payment Method */}
-        <section className={s.section}>
+        <section className={s.section} data-aos="fade-up" data-aos-delay="600" >
           <div className={s.header}>
             <h2>Payment Method</h2>
             <span>Step 3 of 4</span>
@@ -312,7 +323,7 @@ const Form = () => {
         </section>
 
         {/* Step 4: Confirmation */}
-        <section className={s.section}>
+        <section className={s.section} data-aos="fade-up" data-aos-delay="800" >
   <div className={s.header}>
     <h2>Confirmation</h2>
     <span>Step 4 of 4</span>

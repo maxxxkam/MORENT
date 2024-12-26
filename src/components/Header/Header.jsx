@@ -41,9 +41,13 @@ const Header = () => {
     setTimeout(() => setShowResults(false), 100);
   };
 
-  useEffect(() => {
-    AOS.init({ duration: 1000 }); 
-  }, []);
+ useEffect(() => {
+       AOS.init({ 
+         duration: 500,
+          once: true
+ 
+        }); 
+     }, []);
 
   return (
     <header id="featured" className={s.header}>

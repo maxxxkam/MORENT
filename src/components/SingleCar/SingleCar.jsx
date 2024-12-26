@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import s from "./SingleCar.module.scss";
-import { Link, useParams } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import Products from "/public/products.json";
 import Btn from "../btn/Btn";
 import Modal from "../modal/Modal";
@@ -11,6 +11,7 @@ import "aos/dist/aos.css";
 
 const SingleCar = () => {
   const { id } = useParams();
+  const navigate = useNavigate(); // Для навигации между страницами
   const car = Products.find((product) => product.id === parseInt(id));
 
   const [rating, setRating] = useState(0);
@@ -47,15 +48,17 @@ const SingleCar = () => {
     AOS.init({ duration: 1000 });
   }, []);
 
+  const handleRentNow = () => {
+    navigate(`/order/${car.id}`); // Переход на страницу заказа
+  };
+
   return (
     <>
-      {/* Модальное окно */}
       <Modal isOpen={isModalOpen} image={modalImage} onClose={closeModal} />
       <section className={s.singlecar}>
         <div className="container">
           <div className={s.wrapper}>
             <div className={s.boxes}>
-              {/* Левая часть - Изображения */}
               <div
                 className={s.box}
                 data-aos="fade-right"
@@ -132,9 +135,9 @@ const SingleCar = () => {
                     </div>
                   </div>
                 </div>
-                <Link to={"/admin"}>
-                  <Btn>Rent now</Btn>
-                </Link>
+              <Link to={`/order/${car.id}`}>
+                <Btn>Rent now</Btn>
+              </Link>
               </div>
             </div>
           </div>

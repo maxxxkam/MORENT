@@ -91,8 +91,12 @@ const PickUp = () => {
   };
 
    useEffect(() => {
-      AOS.init({ duration: 1000 }); 
-    }, []);
+            AOS.init({ 
+              duration: 500,
+               once: true
+      
+             }); 
+          }, []);
 
   return (
     <section className={s.PickUp}>

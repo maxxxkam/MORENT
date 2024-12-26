@@ -1,22 +1,18 @@
 import React from 'react'
 import s from './Setings.module.scss'
-import NavBar from '../NavBar/NavBar'
-import Dashboard from '../Dashboard/Dashboard'
-import CarRental from '../CarRental/CarRental'
+import MainMenu from '../MainMenu/MainMenu'
 
 const Setings = () => {
   return (
-  <>
-  <section className={s.setings}>
-  <div className="container">
+    <>
+   <section className="setings">
+   <div className="container">
     <div className={s.wrapper}>
-    <NavBar/>
-    <Dashboard/>
-    <CarRental/>
+    <MainMenu/>
     </div>
-  </div>
-  </section>
-  </>
+    </div>
+   </section>
+    </>
   )
 }
 
