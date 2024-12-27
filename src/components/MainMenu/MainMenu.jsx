@@ -10,10 +10,10 @@ const MainMenu = () => {
             <div className={s.wrap}>
                 <p><img src="/home-img.svg" alt="" />Dashboard</p>
                 <p><img src="/car-img.svg" alt="" />Car Rent</p>
-                <p><img src="/rate-img.svg" alt="" />Insight</p>
-                <p><img src="./wallet-img.svg" alt="" />Reimburse</p>
-                <p><img src="./message-img.svg" alt="" />Inbox</p>
-                <p><img src="./calendar-img.svg" alt="" />Calender</p>
+                <p><img src="/chart-img.svg" alt="" />Insight</p>
+                <p><img src="/wallet-img.svg" alt="" />Reimburse</p>
+                <p><img src="/message-img.svg" alt="" />Inbox</p>
+                <p><img src="/calendar-img.svg" alt="" />Calender</p>
             </div>
         </div>
     </section>

@@ -328,7 +328,7 @@ const Form = () => {
     <h2>Confirmation</h2>
     <span>Step 4 of 4</span>
   </div>
-  <form className={s.form} onSubmit={handleSubmit}>
+  <form className={`${s.form} ${s.payMethod}`} onSubmit={handleSubmit}>
     <div className={s.checkboxGroup}>
       <input
         type="checkbox"
