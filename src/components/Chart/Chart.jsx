@@ -1,5 +1,5 @@
-import React from "react";
-import s from './Chart.module.scss'
+import React, { useState, useEffect } from "react";
+import s from './Chart.module.scss';
 
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
@@ -15,18 +15,31 @@ const Chart = () => {
   const COLORS = ["#0D3559", "#175D9C", "#2185DE", "#63A9E8", "#A6CEF2"];
   const total = data.reduce((sum, item) => sum + item.value, 0);
 
+  // State для отслеживания ширины окна
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 600);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <>
-      <div className={s.wrapper}>
+    <div className={`${s.wrapper} ${isMobile ? s.mobile : ""}`}>
       <h3>Top 5 Car Rental</h3>
-      <div style={{ textAlign: "center" }}>
-        <PieChart className={s.wrap} width={500} height={300}>
+      <div className={s.chartContainer}>
+        <PieChart width={isMobile ? 300 : 500} height={isMobile ? 300 : 300}>
           <Pie
             data={data}
-            cx={200}
-            cy={150}
-            innerRadius={80}
-            outerRadius={120}
+            cx="50%"
+            cy="50%"
+            innerRadius={isMobile ? 60 : 80}
+            outerRadius={isMobile ? 100 : 120}
             fill="#8884d8"
             paddingAngle={5}
             dataKey="value"
@@ -36,15 +49,32 @@ const Chart = () => {
             ))}
           </Pie>
           <Tooltip />
-          <Legend layout="vertical" align="right" verticalAlign="middle" />
+          {!isMobile && (
+            <Legend layout="vertical" align="right" verticalAlign="middle" />
+          )}
         </PieChart>
-        <div className={s.text} style={{  }}>
+        <div className={s.text}>
           <h2 style={{ margin: 0 }}>{total.toLocaleString()}</h2>
           <p style={{ margin: 0 }}>Rental Car</p>
         </div>
+        {isMobile && (
+          <div className={s.legend}>
+            {data.map((item, index) => (
+              <div key={index} className={s.legendItem}>
+                {/* Кружок с цветом */}
+                <span
+                  className={s.legendColor}
+                  style={{
+                    backgroundColor: COLORS[index % COLORS.length], // Цвет из массива COLORS
+                  }}
+                ></span>
+                <span>{item.name}</span> {/* Название элемента */}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
-      </div>
-    </>
+    </div>
   );
 };
 

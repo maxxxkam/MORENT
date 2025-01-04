@@ -45,7 +45,7 @@ const Favorite = () => {
         ) : (
           <div className={s.favorite_list}>
             {favoriteCars.map((car, index) => (
-              <div
+              <div 
                 key={car.id}
                 className={s.favorite_car}
                 data-aos="flip-right"  

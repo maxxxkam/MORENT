@@ -15,11 +15,15 @@ const How = () => {
     <>
       <section className={s.how}>
         <div className="container">
+          <div className={s.title} data-aos="flip-up" data-aos-delay='200'>
           <h1>How It Works</h1>
+          </div>
+          <div className={s.subTitle} data-aos="flip-up" data-aos-delay='400' >
           <p className={s.peshka}>
             Welcome to our car rental service! Renting a car is easy and
             convenient. Follow these simple steps to get started:
           </p>
+          </div>
 
           <div className={s.wrapper}>
             <div className={s.steps}>

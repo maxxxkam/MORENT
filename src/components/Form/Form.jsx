@@ -98,7 +98,9 @@ const Form = () => {
            }, []);
 
   return (
-    <div className={s.wrapper}>
+<section className={s.form}>
+  <div className="container">
+  <div className={s.wrapper}>
       <div className={s.formContainer}>
         {/* Step 1: Billing Info */}
         <section className={s.section} data-aos="fade-up" data-aos-delay="200" >
@@ -330,7 +332,7 @@ const Form = () => {
   </div>
   <form className={`${s.form} ${s.payMethod}`} onSubmit={handleSubmit}>
     <div className={s.checkboxGroup}>
-      <input
+      <input required
         type="checkbox"
         id="marketing-consent"
         name="marketingConsent"
@@ -361,6 +363,8 @@ const Form = () => {
 
       </div>
     </div>
+  </div>
+</section>
   );
 };
 

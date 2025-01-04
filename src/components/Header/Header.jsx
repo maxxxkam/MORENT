@@ -74,7 +74,7 @@ const Header = () => {
             {[
               { to: "/favorite", src: "/Like-img.svg", delay: 600 },
               { src: "/Notification-img.svg", delay: 800, onClick: toggleDropdown },
-              { to: "/setings", src: "/Settings-img.svg", delay: 1000 },
+              { to: "/setingsPage", src: "/Settings-img.svg", delay: 1000 },
               { src: "/Profile-img.svg", delay: 1200 },
             ].map((item, index) => (
               <Link

@@ -14,17 +14,18 @@ const Order = ({ id }) => {
   }
 
   useEffect(() => {
-           AOS.init({ 
-             duration: 500,
-              once: true
-     
-            }); 
-         }, []);
+    AOS.init({ 
+      duration: 500,
+      once: true
+    }); 
+  }, []);
 
   return (
+   <section className={s.order}>
+    <div className="container">
     <div className={s.wrapper}>
       <Form/>
-      <div className={s.card} data-aos="zoom-out-up" data-aos-delay="200" >
+      <div className={s.card} data-aos="zoom-out-up" data-aos-delay="200">
         <h2>{car.name}</h2>
         <p>{car.about}</p>
         <img src={car.image} alt={car.name} className={s.image} />
@@ -36,6 +37,8 @@ const Order = ({ id }) => {
         </div>
       </div>
     </div>
+    </div>
+   </section>
   );
 };
 

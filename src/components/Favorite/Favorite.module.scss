@@ -14,11 +14,12 @@
   gap: 40px;
   position: relative;
   padding-top: 20px;
+
 }
 
 .like_button {
   position: absolute;
-  top: -20px; /* Расстояние от верхнего края */
+  top: -35px; /* Расстояние от верхнего края */
   right: -14px; /* Расстояние от правого края */
   background: none;
   border: none;
@@ -71,6 +72,8 @@
     width: 100%;
     object-fit: contain;
   }
+  
+  margin-top: 20px;
 }
 
 .name_a_img{
