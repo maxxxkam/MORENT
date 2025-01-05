@@ -1,22 +1,35 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import s from "./SingleCar.module.scss";
 import { useParams, useNavigate, Link } from "react-router-dom";
-import Products from "/public/products.json";
 import Btn from "../btn/Btn";
 import Modal from "../modal/Modal";
 import Reviews from "../Reviews/Reviews";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const SingleCar = () => {
   const { id } = useParams();
-  const navigate = useNavigate(); // Для навигации между страницами
-  const car = Products.find((product) => product.id === parseInt(id));
-
+  const navigate = useNavigate();
+  const [car, setCar] = useState(null);
   const [rating, setRating] = useState(0);
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
+
+  // Функция для загрузки данных автомобиля
+  const fetchCar = async () => {
+    try {
+      const response = await axios.get(`http://localhost:3000/cars/${id}`);
+      setCar(response.data); // Сохраняем полученные данные автомобиля
+    } catch (error) {
+      console.error("Ошибка при загрузке данных автомобиля: ", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCar();
+    AOS.init({ duration: 1000 });
+  }, [id]);
 
   useEffect(() => {
     const savedRating = localStorage.getItem(`car-rating-${id}`);
@@ -43,14 +56,6 @@ const SingleCar = () => {
   if (!car) {
     return <p>Машина не найдена</p>;
   }
-
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-
-  const handleRentNow = () => {
-    navigate(`/order/${car.id}`); // Переход на страницу заказа
-  };
 
   return (
     <>
@@ -135,15 +140,14 @@ const SingleCar = () => {
                     </div>
                   </div>
                 </div>
-              <Link to={`/order/${car.id}`}>
-                <Btn>Rent now</Btn>
-              </Link>
+                <Link to={`/order/${car.id}`}>
+                  <Btn>Rent now</Btn>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       <Reviews />
     </>
   );

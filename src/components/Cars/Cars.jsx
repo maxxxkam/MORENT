@@ -1,25 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import s from "./Cars.module.scss";
-import Products from "/public/products.json";
 import CarCard from "../Car/Car";
 import { Link } from "react-router-dom";
 
 const CarList = () => {
-  const [count, setCount] = useState(12) 
+  const [cars, setCars] = useState([]);
+  const [count, setCount] = useState(12);
+
+  // Функция для загрузки данных
+  const fetchCars = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/cars");
+      setCars(response.data);
+    } catch (error) {
+      console.error("Ошибка при загрузке данных: ", error);
+    }
+  };
+
+  // Используем useEffect для загрузки данных при монтировании компонента
+  useEffect(() => {
+    fetchCars();
+  }, []);
+
   const toggleCount = () => {
-    setCount(count + 4)
-  }
+    setCount(count + 4);
+  };
+
   return (
     <section className={s.cars}>
       <div className="container">
-      <div className={s.top}>
-      <p className={s.cars_p} >Popular Car</p>
-      <Link to={"/filter"} >
-      <a href="">View all</a>
-      </Link>
-      </div>
+        <div className={s.top}>
+          <p className={s.cars_p}>Popular Car</p>
+          <Link to="/filter">
+            <a href="">View all</a>
+          </Link>
+        </div>
         <div className={s.car_list}>
-          {Products.slice(0, count).map((car) => (
+          {cars.slice(0, count).map((car) => (
             <CarCard key={car.id} car={car} />
           ))}
         </div>

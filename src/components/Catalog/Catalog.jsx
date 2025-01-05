@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Products from "/public/products.json";
+import Products from "../../db.json";
 import s from "./Catalog.module.scss";
-import CarList from "../CarList/CarList"; // Импортируйте новый компонент
+import CarList from "../CarList/CarList";
 import FilterBox from "../FilterBox/FilterBox";
 
 const Catalog = () => {
@@ -12,7 +12,8 @@ const Catalog = () => {
   const categories = ["Sport", "SUV", "MPV", "Sedan", "Coupe", "Hatchback"];
   const seatOptions = ["2 Person", "4 Person", "6 Person", "8 Person"];
 
-  const filteredProducts = Products.filter((product) => {
+  // Обращаемся к массиву cars внутри Products
+  const filteredProducts = Products.cars.filter((product) => {
     const productPrice = parseFloat(product.price.replace("$", ""));
     const productCategory = product.category.trim();
     const productSeats = product.seats.trim();
@@ -50,8 +51,6 @@ const Catalog = () => {
             maxPrice={maxPrice}
             setMaxPrice={setMaxPrice}
           />
-
-          {/* Используем новый компонент CarList для отображения отфильтрованных машин */}
           <CarList filteredProducts={filteredProducts} />
         </div>
       </div>

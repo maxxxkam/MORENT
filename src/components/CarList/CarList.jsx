@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./CarList.module.scss"; // Создайте этот файл для стилей, если нужно
+import s from "./CarList.module.scss"; 
 import CarCard from "../Car/Car";
 
 const CarList = ({ filteredProducts }) => {
