@@ -1,23 +1,29 @@
 {
-   "cars": [
+  "cars": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Koenigsegg",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
-      "image": "/car-img1.png",
+      "images": [
+        "/SingleCar2.jpg",
+        "/singleCar2.jpg"
+      ],
+      "image": "/car-img5.png",
       "price": "$99.00/day",
-      "fuel": "90L",
+      "fuel": "2052L",
       "transmission": "Manual",
-      "seats": "2 P",
+      "seats": "6 P",
       "oldPrice": null,
       "about": "Koenigsegg is renowned for high performance and innovative technology. Founded in 1994, the brand focuses on producing hypercars that push engineering limits."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Nissan GT-R",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img2.png",
       "price": "$80.00/day",
       "fuel": "80L",
@@ -27,23 +33,29 @@
       "about": "The Nissan GT-R, known as 'Godzilla', features a twin-turbo V6 and intelligent all-wheel drive, making it a favorite among enthusiasts."
     },
     {
-      "id": 3,
-      "name": "Rolls-Royce Phantom",
-      "category": "Luxury",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "id": "3",
+      "name": "Rolls-Royce prizrak",
+      "category": "bomj",
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img3.png",
       "price": "$250.00/day",
-      "fuel": "85L",
+      "fuel": "95L",
       "transmission": "Automatic",
       "seats": "4 P",
-      "oldPrice": "$270.00",
+      "oldPrice": "$20.00",
       "about": "The Rolls-Royce Phantom epitomizes luxury and comfort, handcrafted with premium materials and advanced technology for an unparalleled driving experience."
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Tesla Model S",
       "category": "Electric",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img4.png",
       "price": "$120.00/day",
       "fuel": "Electric",
@@ -53,23 +65,29 @@
       "about": "The Tesla Model S is a high-performance electric sedan featuring a large touchscreen interface and impressive acceleration with long-range capabilities."
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Audi Q7",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img5.png",
       "price": "$95.00/day",
       "fuel": "75L",
       "transmission": "Automatic",
-      "seats": "7 P",
+      "seats": "8 P",
       "oldPrice": null,
       "about": "The Audi Q7 combines luxury and practicality with advanced safety technologies and powerful engines, perfect for families seeking a stylish SUV."
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "BMW X5",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img6.png",
       "price": "$90.00/day",
       "fuel": "80L",
@@ -79,10 +97,13 @@
       "about": "The BMW X5 is a luxury SUV known for its sporty design and powerful engine options, providing a spacious cabin for passengers."
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Toyota Corolla",
       "category": "Sedan",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img7.png",
       "price": "$45.00/day",
       "fuel": "55L",
@@ -92,10 +113,13 @@
       "about": "The Toyota Corolla is a reliable, fuel-efficient compact sedan, known for its longevity and practicality. Ideal for daily commuting."
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Ford Mustang",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img8.png",
       "price": "$110.00/day",
       "fuel": "70L",
@@ -105,10 +129,13 @@
       "about": "The Ford Mustang is an iconic American muscle car with powerful engines and classic styling, designed for speed and agility."
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Chevrolet Camaro",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img9.png",
       "price": "$105.00/day",
       "fuel": "72L",
@@ -118,10 +145,13 @@
       "about": "The Chevrolet Camaro is known for its sporty design and thrilling performance, offering powerful engines and an aggressive stance."
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Honda Civic",
       "category": "Sedan",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img10.png",
       "price": "$50.00/day",
       "fuel": "60L",
@@ -131,10 +161,13 @@
       "about": "The Honda Civic offers great value and reliability, known for durability and efficiency, making it a practical choice for commuters."
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Hyundai Tucson",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img11.png",
       "price": "$85.00/day",
       "fuel": "70L",
@@ -144,10 +177,13 @@
       "about": "The Hyundai Tucson is a compact SUV that balances style and functionality, providing a comfortable ride with excellent safety ratings."
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Jeep Wrangler",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img12.png",
       "price": "$95.00/day",
       "fuel": "65L",
@@ -157,10 +193,13 @@
       "about": "The Jeep Wrangler is designed for off-road adventures with classic rugged capability. Perfect for outdoor enthusiasts and city driving."
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Kia Sportage",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img1.png",
       "price": "$75.00/day",
       "fuel": "68L",
@@ -170,10 +209,13 @@
       "about": "The Kia Sportage offers a comfortable ride with modern features, ideal for urban driving and weekend getaways."
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Lamborghini Huracan",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img2.png",
       "price": "$300.00/day",
       "fuel": "85L",
@@ -183,10 +225,13 @@
       "about": "The Lamborghini Huracan is a supercar delivering exhilarating performance with an aggressive design and powerful V10 engine."
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Mazda CX-5",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img3.png",
       "price": "$88.00/day",
       "fuel": "75L",
@@ -196,10 +241,13 @@
       "about": "The Mazda CX-5 combines sporty handling with stylish design, offering a premium interior and advanced safety features."
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Mercedes-Benz G-Class",
       "category": "Luxury SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img4.png",
       "price": "$200.00/day",
       "fuel": "90L",
@@ -209,10 +257,13 @@
       "about": "The Mercedes-Benz G-Class is a luxury SUV known for its commanding presence, rugged capability, and opulent interior."
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Porsche 911",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img5.png",
       "price": "$270.00/day",
       "fuel": "75L",
@@ -222,10 +273,13 @@
       "about": "The Porsche 911 is a timeless sports car recognized for performance and design, offering thrilling driving experiences with precision handling."
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Range Rover Sport",
       "category": "Luxury SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img6.png",
       "price": "$185.00/day",
       "fuel": "80L",
@@ -235,10 +289,13 @@
       "about": "The Range Rover Sport combines luxury and off-road capability, providing a powerful performance and a luxurious interior."
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Subaru Forester",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img7.png",
       "price": "$70.00/day",
       "fuel": "65L",
@@ -248,10 +305,13 @@
       "about": "The Subaru Forester is known for safety and all-weather performance, featuring standard all-wheel drive and a spacious interior."
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Volkswagen Golf",
       "category": "Hatchback",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img8.png",
       "price": "$55.00/day",
       "fuel": "60L",
@@ -261,10 +321,13 @@
       "about": "The Volkswagen Golf is a versatile hatchback that is practical and fun to drive, offering reliability and ample space."
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Jaguar F-Type",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img9.png",
       "price": "$250.00/day",
       "fuel": "75L",
@@ -274,10 +337,13 @@
       "about": "The Jaguar F-Type is a high-performance sports car, offering incredible speed and an iconic design."
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Bentley Continental GT",
       "category": "Luxury",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img10.png",
       "price": "$350.00/day",
       "fuel": "80L",
@@ -287,10 +353,13 @@
       "about": "The Bentley Continental GT is a luxurious grand tourer known for its exquisite craftsmanship and powerful engine."
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Audi A8",
       "category": "Luxury",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img11.png",
       "price": "$240.00/day",
       "fuel": "70L",
@@ -300,10 +369,13 @@
       "about": "The Audi A8 combines luxury with cutting-edge technology, offering a comfortable ride with advanced features."
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "BMW 7 Series",
       "category": "Luxury",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img12.png",
       "price": "$280.00/day",
       "fuel": "75L",
@@ -313,10 +385,13 @@
       "about": "The BMW 7 Series is a flagship luxury sedan known for its comfort, elegance, and cutting-edge technology."
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Aston Martin DB11",
       "category": "Luxury Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img1.png",
       "price": "$350.00/day",
       "fuel": "80L",
@@ -326,10 +401,13 @@
       "about": "The Aston Martin DB11 blends luxury with a thrilling performance, offering a V12 engine and exquisite styling."
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Koenigsegg",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img1.png",
       "price": "$99.00/day",
       "fuel": "90L",
@@ -339,10 +417,13 @@
       "about": "Koenigsegg is renowned for high performance and innovative technology. Founded in 1994, the brand focuses on producing hypercars that push engineering limits."
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Nissan GT-R",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img2.png",
       "price": "$80.00/day",
       "fuel": "80L",
@@ -352,10 +433,13 @@
       "about": "The Nissan GT-R, known as 'Godzilla', features a twin-turbo V6 and intelligent all-wheel drive, making it a favorite among enthusiasts."
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Rolls-Royce Phantom",
       "category": "Luxury",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img3.png",
       "price": "$250.00/day",
       "fuel": "85L",
@@ -365,10 +449,13 @@
       "about": "The Rolls-Royce Phantom epitomizes luxury and comfort, handcrafted with premium materials and advanced technology for an unparalleled driving experience."
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Tesla Model S",
       "category": "Electric",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img4.png",
       "price": "$120.00/day",
       "fuel": "Electric",
@@ -378,10 +465,13 @@
       "about": "The Tesla Model S is a high-performance electric sedan featuring a large touchscreen interface and impressive acceleration with long-range capabilities."
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Audi Q7",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img5.png",
       "price": "$95.00/day",
       "fuel": "75L",
@@ -391,10 +481,13 @@
       "about": "The Audi Q7 combines luxury and practicality with advanced safety technologies and powerful engines, perfect for families seeking a stylish SUV."
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "BMW X5",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img6.png",
       "price": "$90.00/day",
       "fuel": "80L",
@@ -404,10 +497,13 @@
       "about": "The BMW X5 is a luxury SUV known for its sporty design and powerful engine options, providing a spacious cabin for passengers."
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Toyota Corolla",
       "category": "Sedan",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img7.png",
       "price": "$45.00/day",
       "fuel": "55L",
@@ -417,10 +513,13 @@
       "about": "The Toyota Corolla is a reliable, fuel-efficient compact sedan, known for its longevity and practicality. Ideal for daily commuting."
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Ford Mustang",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img8.png",
       "price": "$110.00/day",
       "fuel": "70L",
@@ -430,10 +529,13 @@
       "about": "The Ford Mustang is an iconic American muscle car with powerful engines and classic styling, designed for speed and agility."
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "Chevrolet Camaro",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img9.png",
       "price": "$105.00/day",
       "fuel": "72L",
@@ -443,10 +545,13 @@
       "about": "The Chevrolet Camaro is known for its sporty design and thrilling performance, offering powerful engines and an aggressive stance."
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "Honda Civic",
       "category": "Sedan",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img10.png",
       "price": "$50.00/day",
       "fuel": "60L",
@@ -456,10 +561,13 @@
       "about": "The Honda Civic offers great value and reliability, known for durability and efficiency, making it a practical choice for commuters."
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Hyundai Tucson",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img11.png",
       "price": "$85.00/day",
       "fuel": "70L",
@@ -469,10 +577,13 @@
       "about": "The Hyundai Tucson is a compact SUV that balances style and functionality, providing a comfortable ride with excellent safety ratings."
     },
     {
-      "id": 37,
+      "id": "37",
       "name": "Jeep Wrangler",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img12.png",
       "price": "$95.00/day",
       "fuel": "65L",
@@ -482,10 +593,13 @@
       "about": "The Jeep Wrangler is designed for off-road adventures with classic rugged capability. Perfect for outdoor enthusiasts and city driving."
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "Kia Sportage",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img1.png",
       "price": "$75.00/day",
       "fuel": "68L",
@@ -495,10 +609,13 @@
       "about": "The Kia Sportage offers a comfortable ride with modern features, ideal for urban driving and weekend getaways."
     },
     {
-      "id": 40,
+      "id": "39",
       "name": "Lamborghini Huracan",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img2.png",
       "price": "$300.00/day",
       "fuel": "85L",
@@ -508,10 +625,13 @@
       "about": "The Lamborghini Huracan is a supercar delivering exhilarating performance with an aggressive design and powerful V10 engine."
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "Mazda CX-5",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img3.png",
       "price": "$88.00/day",
       "fuel": "75L",
@@ -521,10 +641,13 @@
       "about": "The Mazda CX-5 combines sporty handling with stylish design, offering a premium interior and advanced safety features."
     },
     {
-      "id": 41,
+      "id": "41",
       "name": "Mercedes-Benz G-Class",
       "category": "Luxury SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img4.png",
       "price": "$200.00/day",
       "fuel": "90L",
@@ -534,10 +657,13 @@
       "about": "The Mercedes-Benz G-Class is a luxury SUV known for its commanding presence, rugged capability, and opulent interior."
     },
     {
-      "id": 42,
+      "id": "42",
       "name": "Porsche 911",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img5.png",
       "price": "$270.00/day",
       "fuel": "75L",
@@ -547,10 +673,13 @@
       "about": "The Porsche 911 is a timeless sports car recognized for performance and design, offering thrilling driving experiences with precision handling."
     },
     {
-      "id": 43,
+      "id": "43",
       "name": "Range Rover Sport",
       "category": "Luxury SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img6.png",
       "price": "$185.00/day",
       "fuel": "80L",
@@ -560,10 +689,13 @@
       "about": "The Range Rover Sport combines luxury and off-road capability, providing a powerful performance and a luxurious interior."
     },
     {
-      "id": 44,
+      "id": "44",
       "name": "Subaru Forester",
       "category": "SUV",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img7.png",
       "price": "$70.00/day",
       "fuel": "65L",
@@ -573,10 +705,13 @@
       "about": "The Subaru Forester is known for safety and all-weather performance, featuring standard all-wheel drive and a spacious interior."
     },
     {
-      "id": 45,
+      "id": "45",
       "name": "Volkswagen Golf",
       "category": "Hatchback",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img8.png",
       "price": "$55.00/day",
       "fuel": "60L",
@@ -586,10 +721,13 @@
       "about": "The Volkswagen Golf is a versatile hatchback that is practical and fun to drive, offering reliability and ample space."
     },
     {
-      "id": 46,
+      "id": "46",
       "name": "Jaguar F-Type",
       "category": "Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img9.png",
       "price": "$250.00/day",
       "fuel": "75L",
@@ -599,10 +737,13 @@
       "about": "The Jaguar F-Type is a high-performance sports car, offering incredible speed and an iconic design."
     },
     {
-      "id": 47,
+      "id": "47",
       "name": "Bentley Continental GT",
       "category": "Luxury",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img10.png",
       "price": "$350.00/day",
       "fuel": "80L",
@@ -612,10 +753,13 @@
       "about": "The Bentley Continental GT is a luxurious grand tourer known for its exquisite craftsmanship and powerful engine."
     },
     {
-      "id": 48,
+      "id": "48",
       "name": "Audi A8",
       "category": "Luxury",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img11.png",
       "price": "$240.00/day",
       "fuel": "70L",
@@ -625,10 +769,13 @@
       "about": "The Audi A8 combines luxury with cutting-edge technology, offering a comfortable ride with advanced features."
     },
     {
-      "id": 49,
+      "id": "49",
       "name": "BMW 7 Series",
       "category": "Luxury",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img12.png",
       "price": "$280.00/day",
       "fuel": "75L",
@@ -638,10 +785,13 @@
       "about": "The BMW 7 Series is a flagship luxury sedan known for its comfort, elegance, and cutting-edge technology."
     },
     {
-      "id": 50,
+      "id": "50",
       "name": "Aston Martin DB11",
       "category": "Luxury Sport",
-      "images": ["/SingleCar1.jpg", "/singleCar2.jpg"],
+      "images": [
+        "/SingleCar1.jpg",
+        "/singleCar2.jpg"
+      ],
       "image": "/car-img1.png",
       "price": "$350.00/day",
       "fuel": "80L",
@@ -649,8 +799,21 @@
       "seats": "2 P",
       "oldPrice": null,
       "about": "The Aston Martin DB11 blends luxury with a thrilling performance, offering a V12 engine and exquisite styling."
+    },
+    {
+      "id": 1736148925894,
+      "name": "Абдуазим",
+      "category": "trans",
+      "images": [
+        "https://storage.yandexcloud.net/pfluz/player/3ffdc6b7-1d5a-43f0-8374-a96ca6270922-3847e742-8ae5-4a85-8958-996aa924437f.png"
+      ],
+      "image": "https://storage.yandexcloud.net/pfluz/player/3ffdc6b7-1d5a-43f0-8374-a96ca6270922-3847e742-8ae5-4a85-8958-996aa924437f.png",
+      "price": "69",
+      "fuel": "6L spermi",
+      "transmission": "yes",
+      "seats": "2",
+      "oldPrice": "52",
+      "about": "norm chel a tak"
     }
   ]
-  
- }
- 
+}

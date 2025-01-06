@@ -13,6 +13,7 @@ import How from "./components/How/How";
 import Events from "./components/Events/Events";
 import OrderPage from "./pages/OrderPage"; 
 import SetingsPage from "./pages/SetingsPage";
+import AdminPage from "./pages/AdminPage";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/howpage" element={<How />} />
         <Route path="/eventsPage" element={<Events />} />
         <Route path="/setingsPage" element={<SetingsPage />} /> 
+        <Route path="/admin" element={<AdminPage/>} />
       </Routes>
       <Footer />
     </>

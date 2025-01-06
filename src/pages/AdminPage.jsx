@@ -1,8 +1,11 @@
 import React from 'react'
+import AdminForm from '../components/AdminForm/AdminForm'
 
 const AdminPage = () => {
   return (
-    <div>AdminPage</div>
+   <>
+   <AdminForm/>
+   </>
   )
 }
 
