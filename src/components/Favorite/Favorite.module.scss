@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
+  margin-top: 20px;
 }
 
 .favorite_car{
@@ -19,9 +20,9 @@
 
 .like_button {
   position: absolute;
-  top: -35px; /* Расстояние от верхнего края */
+  top: -45px; /* Расстояние от верхнего края */
   right: -14px; /* Расстояние от правого края */
-  background: none;
+  background-color: none;
   border: none;
   cursor: pointer;
   padding: 5px;

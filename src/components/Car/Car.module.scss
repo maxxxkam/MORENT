@@ -18,6 +18,10 @@
   }
 }
 
+.car_image{
+  object-fit: contain;
+}
+
 .car_details{
   display: flex;
   align-items: center;
@@ -61,7 +65,7 @@
 }
 .like_button {
   position: absolute;
-  top: 10px;
+  top: -7px;
   right: 10px;
   background: none;
   border: none;

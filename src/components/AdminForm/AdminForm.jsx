@@ -211,7 +211,7 @@ const AdminForm = () => {
           <h2>Список товаров</h2>
           <ul className={s.editWrapper} >
             {cars.map((car) => (
-              <li key={car.id}>
+              <li key={car.id} className={s.infos}>
                 <strong>{car.name}</strong> - {car.price}
                 <button onClick={() => handleEdit(car)}>Редактировать</button>
                 <button onClick={() => handleDelete(car.id)}>Удалить</button>

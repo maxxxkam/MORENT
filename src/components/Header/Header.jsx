@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import s from "./Header.module.scss";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
 import carData from "/public/products.json";
 
 import AOS from "aos";
-import "aos/dist/aos.css"; 
+import "aos/dist/aos.css";
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCars, setFilteredCars] = useState(carData);
   const [showResults, setShowResults] = useState(false);
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
     setShowDropdown((prev) => !prev);
@@ -41,13 +42,26 @@ const Header = () => {
     setTimeout(() => setShowResults(false), 100);
   };
 
- useEffect(() => {
-       AOS.init({ 
-         duration: 500,
-          once: true
- 
-        }); 
-     }, []);
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      once: true,
+    });
+  }, []);
 
   return (
     <header id="featured" className={s.header}>
@@ -73,7 +87,11 @@ const Header = () => {
           <div className={s.menu}>
             {[
               { to: "/favorite", src: "/Like-img.svg", delay: 600 },
-              { src: "/Notification-img.svg", delay: 800, onClick: toggleDropdown },
+              {
+                src: "/Notification-img.svg",
+                delay: 800,
+                onClick: toggleDropdown,
+              },
               { to: "/setingsPage", src: "/Settings-img.svg", delay: 1000 },
               { src: "/Profile-img.svg", delay: 1200 },
             ].map((item, index) => (
@@ -89,7 +107,7 @@ const Header = () => {
             ))}
 
             {showDropdown && (
-              <div className={s.dropdown}>
+              <div ref={dropdownRef} className={s.dropdown}>
                 <p>У вас новое сообщение</p>
                 <p>Ваша бронь подтверждена</p>
                 <p>Запланировано техническое обслуживание</p>

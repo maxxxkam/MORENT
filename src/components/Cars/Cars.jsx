@@ -8,7 +8,6 @@ const CarList = () => {
   const [cars, setCars] = useState([]);
   const [count, setCount] = useState(12);
 
-  // Функция для загрузки данных
   const fetchCars = async () => {
     try {
       const response = await axios.get("http://localhost:3000/cars");
@@ -18,7 +17,7 @@ const CarList = () => {
     }
   };
 
-  // Используем useEffect для загрузки данных при монтировании компонента
+
   useEffect(() => {
     fetchCars();
   }, []);

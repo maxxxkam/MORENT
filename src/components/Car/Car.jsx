@@ -7,28 +7,27 @@ import AOS from "aos";
 import "aos/dist/aos.css"; 
 
 const CarCard = ({ car }) => {
-  const [isFavorite, setIsFavorite] = useState(false); // Состояние лайка
+  const [isFavorite, setIsFavorite] = useState(false); 
 
-  // Проверяем, есть ли машина в избранных при загрузке компонента
+
   useEffect(() => {
     const storedFavorites = JSON.parse(localStorage.getItem("favoriteCars")) || [];
     setIsFavorite(storedFavorites.some((favCar) => favCar.id === car.id));
   }, [car.id]);
 
-  // Функция для добавления/удаления машины из избранного
+
   const handleFavoriteClick = () => {
     const storedFavorites = JSON.parse(localStorage.getItem("favoriteCars")) || [];
 
     let updatedFavorites;
     if (isFavorite) {
-      // Убираем машину из избранного
+
       updatedFavorites = storedFavorites.filter((favCar) => favCar.id !== car.id);
     } else {
-      // Добавляем машину в избранное
+
       updatedFavorites = [...storedFavorites, car];
     }
 
-    // Сохраняем в localStorage и обновляем состояние
     localStorage.setItem("favoriteCars", JSON.stringify(updatedFavorites));
     setIsFavorite(!isFavorite);
   };

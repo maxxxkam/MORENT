@@ -128,7 +128,7 @@ const Footer = () => {
       {isPartnershipModalOpen && (
         <div className={s.modalOverlay} onClick={closePartnershipModal}>
           <div className={s.modalContent} onClick={(e) => e.stopPropagation()}>
-            <button className={s.closeButton} onClick={closePartnershipModal}>×</button>
+            <button className={s.closeButton} onClick={closePartnershipModal}>✖️</button>
             <h2>Our Partners</h2>
             <div className={s.partners}>
               <div className={s.partnerItem}>
@@ -137,23 +137,23 @@ const Footer = () => {
               </div>
               <div className={s.partnerItem}>
                 <img src="https://www.freepnglogos.com/uploads/hyundai-logo-7.png" alt="Company 2" />
-                <a href="https://www.hyundai.com/worldwide/en">Hyundai</a>
+                <a target='blanck'  href="https://www.hyundai.com/worldwide/en">Hyundai</a>
               </div>
               <div className={s.partnerItem}>
                 <img src="https://loodibee.com/wp-content/uploads/Honda-Logo.png" alt="Company 3" />
-                <a href="https://global.honda/en/">Honda</a>
+                <a target='blanck'  href="https://global.honda/en/">Honda</a>
               </div>
               <div className={s.partnerItem}>
                 <img src="https://cdn.freebiesupply.com/logos/large/2x/chevrolet-1-logo-png-transparent.png" alt="Company 1" />
-                <a href="https://www.chevrolet.com/">Chevrolet</a>
+                <a target='blanck'  href="https://www.chevrolet.com/">Chevrolet</a>
               </div>
               <div className={s.partnerItem}>
                 <img src="https://logos-world.net/wp-content/uploads/2021/03/Audi-Logo.png" alt="Company 2" />
-                <a href="https://www.audi.com/en.html">Audi</a>
+                <a target='blanck'  href="https://www.audi.com/en.html">Audi</a>
               </div>
               <div className={s.partnerItem}>
                 <img src="https://i.pinimg.com/originals/9d/bd/fd/9dbdfd81ed2519c8e33bf5fd533380bc.png" alt="Company 3" />
-               <a href="https://www.koenigsegg.com/">Koenigsegg</a>
+               <a target='blanck'  href="https://www.koenigsegg.com/">Koenigsegg</a>
               </div>
             </div>
           </div>

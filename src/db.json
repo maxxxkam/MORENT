@@ -799,21 +799,6 @@
       "seats": "2 P",
       "oldPrice": null,
       "about": "The Aston Martin DB11 blends luxury with a thrilling performance, offering a V12 engine and exquisite styling."
-    },
-    {
-      "id": 1736148925894,
-      "name": "Абдуазим",
-      "category": "trans",
-      "images": [
-        "https://storage.yandexcloud.net/pfluz/player/3ffdc6b7-1d5a-43f0-8374-a96ca6270922-3847e742-8ae5-4a85-8958-996aa924437f.png"
-      ],
-      "image": "https://storage.yandexcloud.net/pfluz/player/3ffdc6b7-1d5a-43f0-8374-a96ca6270922-3847e742-8ae5-4a85-8958-996aa924437f.png",
-      "price": "69",
-      "fuel": "6L spermi",
-      "transmission": "yes",
-      "seats": "2",
-      "oldPrice": "52",
-      "about": "norm chel a tak"
     }
   ]
 }

@@ -65,7 +65,8 @@
   button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    // background-color: #007bff;
+    background: none;
     color: white;
     border: none;
     border-radius: 5px;
@@ -73,7 +74,8 @@
   }
   
   button:hover {
-    background-color: #0056b3;
+    // background-color: #0056b3;
+    
   }
   
   .highlight {
