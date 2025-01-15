@@ -1,16 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
-import s from "./Header.module.scss";
-import SectionTitle from "../SectionTitle/SectionTitle";
-import { Link } from "react-router-dom";
-import carData from "/public/products.json";
+import React, { useEffect, useState, useRef, useMemo } from 'react';
+import s from './Header.module.scss';
+import SectionTitle from '../SectionTitle/SectionTitle';
+import { Link } from 'react-router-dom';
+import carData from '/public/products.json';
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredCars, setFilteredCars] = useState(carData);
   const [showResults, setShowResults] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -18,20 +17,27 @@ const Header = () => {
     setShowDropdown((prev) => !prev);
   };
 
-  const handleSearch = (event) => {
-    const query = event.target.value.trim().toLowerCase();
-    setSearchQuery(query);
+  // Дебаунс для оптимизации ввода
+  const [debouncedQuery, setDebouncedQuery] = useState(searchQuery);
+  useEffect(() => {
+    const handler = setTimeout(() => setDebouncedQuery(searchQuery), 300);
+    return () => clearTimeout(handler);
+  }, [searchQuery]);
 
-    if (query) {
-      const filtered = carData.filter((car) =>
-        Object.values(car).some((value) =>
-          String(value).toLowerCase().includes(query)
-        )
-      );
-      setFilteredCars(filtered);
-    } else {
-      setFilteredCars(carData);
-    }
+  // Фильтрация с использованием useMemo
+  const filteredCars = useMemo(() => {
+    if (!debouncedQuery) return carData;
+
+    const query = debouncedQuery.toLowerCase();
+    return carData.filter((car) =>
+      Object.values(car).some((value) =>
+        String(value).toLowerCase().includes(query)
+      )
+    );
+  }, [debouncedQuery]);
+
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
   };
 
   const handleInputClick = () => {
@@ -42,7 +48,7 @@ const Header = () => {
     setTimeout(() => setShowResults(false), 100);
   };
 
-  // Close dropdown when clicking outside
+  // Закрытие выпадающего меню при клике вне элемента
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -68,7 +74,7 @@ const Header = () => {
       <div className="container">
         <div className={s.wrapper}>
           <div className={s.box} data-aos="fade-down" data-aos-delay="200">
-            <Link className={s.logo} to={"/"}>
+            <Link className={s.logo} to={'/'}>
               <SectionTitle>MORANT</SectionTitle>
             </Link>
             <input
@@ -86,18 +92,18 @@ const Header = () => {
           </div>
           <div className={s.menu}>
             {[
-              { to: "/favorite", src: "/Like-img.svg", delay: 600 },
+              { to: '/favorite', src: '/Like-img.svg', delay: 600 },
               {
-                src: "/Notification-img.svg",
+                src: '/Notification-img.svg',
                 delay: 800,
                 onClick: toggleDropdown,
               },
-              { to: "/setingsPage", src: "/Settings-img.svg", delay: 1000 },
-              { src: "/Profile-img.svg", delay: 1200 },
+              { to: '/setingsPage', src: '/Settings-img.svg', delay: 1000 },
+              { src: '/Profile-img.svg', delay: 1200 },
             ].map((item, index) => (
               <Link
                 key={index}
-                to={item.to || "#"}
+                to={item.to || '#'}
                 onClick={item.onClick}
                 data-aos="fade-down"
                 data-aos-delay={item.delay}
@@ -111,34 +117,32 @@ const Header = () => {
                 <p>У вас новое сообщение</p>
                 <p>Ваша бронь подтверждена</p>
                 <p>Запланировано техническое обслуживание</p>
-                <Link onClick={toggleDropdown} to={"/notification"}>
+                <Link onClick={toggleDropdown} to={'/notification'}>
                   Посмотреть все уведомления
                 </Link>
               </div>
             )}
           </div>
-          <div
-            className={`${s.searchResults} ${showResults ? s.show : ""}`}
-          >
-            {filteredCars.length > 0 ? (
-              filteredCars.map((car, index) => (
-                <div
-                  key={car.id}
-                  className={s.carCard}
-                  data-aos="fade-down"
-                  data-aos-delay={200 + index * 100}
-                >
-                  <Link to={`/carPage/${car.id}`}>
-                    <img src={car.image} alt={car.name} />
-                  </Link>
-                  <h3>{car.name}</h3>
-                  <p>{car.price}</p>
-                </div>
-              ))
-            ) : (
-              <p>По вашему запросу ничего не найдено</p>
-            )}
-          </div>
+          <div className={`${s.searchResults} ${showResults ? s.show : ''}`}>
+  {filteredCars.length > 0 ? (
+    filteredCars.map((car, index) => (
+      <div
+        key={car.id || index} // Используем `car.id` как ключ, а `index` как резерв
+        className={s.carCard}
+        data-aos="fade-down"
+        data-aos-delay={200 + index * 100}
+      >
+        <Link to={`/carPage/${car.id}`}>
+          <img src={car.image} alt={car.name} />
+          <h3>{car.name}</h3>
+          <p>{car.price}</p>
+        </Link>
+      </div>
+    ))
+  ) : (
+    <p>По вашему запросу ничего не найдено</p>
+  )}
+</div>
         </div>
       </div>
     </header>

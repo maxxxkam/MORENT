@@ -10,7 +10,7 @@
 
 
   h3{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
   }
   >p{
@@ -20,6 +20,7 @@
 
 .car_image{
   object-fit: contain;
+  aspect-ratio: 2/1;
 }
 
 .car_details{
@@ -40,7 +41,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  // gap: 10px;
   s{
     opacity: 60%;
   }

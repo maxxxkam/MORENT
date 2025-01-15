@@ -307,7 +307,7 @@
     {
       "id": "20",
       "name": "Volkswagen Golf",
-      "category": "Hatchback",
+      "category": "Hatchback235235235",
       "images": [
         "/SingleCar1.jpg",
         "/singleCar2.jpg"
@@ -317,7 +317,7 @@
       "fuel": "60L",
       "transmission": "Automatic",
       "seats": "6 P",
-      "oldPrice": "$65.00",
+      "oldPrice": "$6588888.00",
       "about": "The Volkswagen Golf is a versatile hatchback that is practical and fun to drive, offering reliability and ample space."
     },
     {

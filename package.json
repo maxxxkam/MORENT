@@ -20,7 +20,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.0.2",
     "recharts": "^2.15.0",
-    "sass": "^1.82.0"
+    "sass": "^1.83.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
