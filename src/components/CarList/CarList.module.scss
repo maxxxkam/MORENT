@@ -6,3 +6,17 @@
 
 }
 
+
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  button {
+    background-color: rgb(192, 192, 192);
+    color: #fff;
+
+    &.active {
+      background-color: #3563E9;
+    }
+  }
+}

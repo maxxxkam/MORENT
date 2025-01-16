@@ -41,7 +41,9 @@ const CarCard = ({ car }) => {
     <div className={s.car_card} data-aos="fade-up" >
       <h3 className={s.car_name}>{car.name}</h3>
       <p className={s.car_category}>{car.category}</p>
-      <img src={car.image} alt={car.name} className={s.car_image} />
+     <Link to={`/carPage/${car.id}`} >
+     <img src={car.image} alt={car.name} className={s.car_image} />
+     </Link>
       
       <p className={s.car_details}>
         <img src="/gas-station.svg" alt="Fuel" />
@@ -50,7 +52,7 @@ const CarCard = ({ car }) => {
         {car.seats}
       </p>
       
-      {/* Кнопка лайка в правом верхнем углу */}
+
       <button
         className={s.like_button}
         onClick={handleFavoriteClick}

@@ -17,14 +17,14 @@ const Header = () => {
     setShowDropdown((prev) => !prev);
   };
 
-  // Дебаунс для оптимизации ввода
+ 
   const [debouncedQuery, setDebouncedQuery] = useState(searchQuery);
   useEffect(() => {
     const handler = setTimeout(() => setDebouncedQuery(searchQuery), 300);
     return () => clearTimeout(handler);
   }, [searchQuery]);
 
-  // Фильтрация с использованием useMemo
+
   const filteredCars = useMemo(() => {
     if (!debouncedQuery) return carData;
 
@@ -48,7 +48,7 @@ const Header = () => {
     setTimeout(() => setShowResults(false), 100);
   };
 
-  // Закрытие выпадающего меню при клике вне элемента
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -127,7 +127,7 @@ const Header = () => {
   {filteredCars.length > 0 ? (
     filteredCars.map((car, index) => (
       <div
-        key={car.id || index} // Используем `car.id` как ключ, а `index` как резерв
+        key={car.id || index} 
         className={s.carCard}
         data-aos="fade-down"
         data-aos-delay={200 + index * 100}

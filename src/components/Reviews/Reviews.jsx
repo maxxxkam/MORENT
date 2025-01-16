@@ -5,22 +5,19 @@ import reviews from '/public/comments.json'; // Убедитесь, что пу�
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 
-
 const Reviews = () => {
-  const [showAll, setShowAll] = useState(false); // Состояние для управления отображением всех отзывов
+  const [visibleReviews, setVisibleReviews] = useState(2); // Изначально показываем 2 отзыва
 
-  const toggleReviews = () => {
-    setShowAll(!showAll); // Переключаем состояние при клике на кнопку
+  const showMoreReviews = () => {
+    setVisibleReviews((prev) => prev + 2); // При клике добавляем еще 2 отзыва
   };
 
-   useEffect(() => {
-      AOS.init({ 
-        duration: 500,
-         once: true
-
-       }); 
-    }, []);
-  
+  useEffect(() => {
+    AOS.init({ 
+      duration: 500,
+      once: true,
+    }); 
+  }, []);
 
   return (
     <div className={s.reviewsSection}>
@@ -30,8 +27,8 @@ const Reviews = () => {
           <span className={s.reviewsCount}>{reviews.length}</span> {/* Отображаем общее количество отзывов */}
         </div>
         <div className={s.reviewsList}>
-          {(showAll ? reviews : reviews.slice(0, 2)).map((review) => (
-            <div key={review.id} className={s.reviewCard}  data-aos="flip-up" >
+          {reviews.slice(0, visibleReviews).map((review) => (
+            <div key={review.id} className={s.reviewCard} data-aos="flip-up">
               <img
                 src={review.image}
                 alt={review.name}
@@ -52,9 +49,11 @@ const Reviews = () => {
             </div>
           ))}
         </div>
-        <button className={s.showAll} onClick={toggleReviews}>
-          {showAll ? "Show LESS" : "Show ALL"} {/* Меняем текст кнопки в зависимости от состояния */}
-        </button>
+        {visibleReviews < reviews.length && (
+          <button className={s.showAll} onClick={showMoreReviews}>
+            Show More
+          </button>
+        )}
       </div>
     </div>
   );

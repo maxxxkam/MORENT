@@ -5,14 +5,14 @@
       "name": "Koenigsegg",
       "category": "Sport",
       "images": [
-        "/SingleCar2.jpg",
+        "/SingleCar1.jpg",
         "/singleCar2.jpg"
       ],
       "image": "/car-img5.png",
       "price": "$99.00/day",
       "fuel": "2052L",
       "transmission": "Manual",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "Koenigsegg is renowned for high performance and innovative technology. Founded in 1994, the brand focuses on producing hypercars that push engineering limits."
     },
@@ -28,7 +28,7 @@
       "price": "$80.00/day",
       "fuel": "80L",
       "transmission": "Manual",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": "$100.00",
       "about": "The Nissan GT-R, known as 'Godzilla', features a twin-turbo V6 and intelligent all-wheel drive, making it a favorite among enthusiasts."
     },
@@ -44,7 +44,7 @@
       "price": "$250.00/day",
       "fuel": "95L",
       "transmission": "Automatic",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": "$20.00",
       "about": "The Rolls-Royce Phantom epitomizes luxury and comfort, handcrafted with premium materials and advanced technology for an unparalleled driving experience."
     },
@@ -60,7 +60,7 @@
       "price": "$120.00/day",
       "fuel": "Electric",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Tesla Model S is a high-performance electric sedan featuring a large touchscreen interface and impressive acceleration with long-range capabilities."
     },
@@ -76,7 +76,7 @@
       "price": "$95.00/day",
       "fuel": "75L",
       "transmission": "Automatic",
-      "seats": "8 P",
+      "seats": "8 Person",
       "oldPrice": null,
       "about": "The Audi Q7 combines luxury and practicality with advanced safety technologies and powerful engines, perfect for families seeking a stylish SUV."
     },
@@ -92,7 +92,7 @@
       "price": "$90.00/day",
       "fuel": "80L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": "$100.00",
       "about": "The BMW X5 is a luxury SUV known for its sporty design and powerful engine options, providing a spacious cabin for passengers."
     },
@@ -108,7 +108,7 @@
       "price": "$45.00/day",
       "fuel": "55L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Toyota Corolla is a reliable, fuel-efficient compact sedan, known for its longevity and practicality. Ideal for daily commuting."
     },
@@ -124,7 +124,7 @@
       "price": "$110.00/day",
       "fuel": "70L",
       "transmission": "Manual",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": "$120.00",
       "about": "The Ford Mustang is an iconic American muscle car with powerful engines and classic styling, designed for speed and agility."
     },
@@ -140,7 +140,7 @@
       "price": "$105.00/day",
       "fuel": "72L",
       "transmission": "Manual",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": null,
       "about": "The Chevrolet Camaro is known for its sporty design and thrilling performance, offering powerful engines and an aggressive stance."
     },
@@ -156,7 +156,7 @@
       "price": "$50.00/day",
       "fuel": "60L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": "$60.00",
       "about": "The Honda Civic offers great value and reliability, known for durability and efficiency, making it a practical choice for commuters."
     },
@@ -172,7 +172,7 @@
       "price": "$85.00/day",
       "fuel": "70L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Hyundai Tucson is a compact SUV that balances style and functionality, providing a comfortable ride with excellent safety ratings."
     },
@@ -188,7 +188,7 @@
       "price": "$95.00/day",
       "fuel": "65L",
       "transmission": "Manual",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": "$110.00",
       "about": "The Jeep Wrangler is designed for off-road adventures with classic rugged capability. Perfect for outdoor enthusiasts and city driving."
     },
@@ -204,7 +204,7 @@
       "price": "$75.00/day",
       "fuel": "68L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Kia Sportage offers a comfortable ride with modern features, ideal for urban driving and weekend getaways."
     },
@@ -220,7 +220,7 @@
       "price": "$300.00/day",
       "fuel": "85L",
       "transmission": "Manual",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": "$320.00",
       "about": "The Lamborghini Huracan is a supercar delivering exhilarating performance with an aggressive design and powerful V10 engine."
     },
@@ -236,7 +236,7 @@
       "price": "$88.00/day",
       "fuel": "75L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Mazda CX-5 combines sporty handling with stylish design, offering a premium interior and advanced safety features."
     },
@@ -252,7 +252,7 @@
       "price": "$200.00/day",
       "fuel": "90L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": "$220.00",
       "about": "The Mercedes-Benz G-Class is a luxury SUV known for its commanding presence, rugged capability, and opulent interior."
     },
@@ -268,7 +268,7 @@
       "price": "$270.00/day",
       "fuel": "75L",
       "transmission": "Manual",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": "$280.00",
       "about": "The Porsche 911 is a timeless sports car recognized for performance and design, offering thrilling driving experiences with precision handling."
     },
@@ -284,7 +284,7 @@
       "price": "$185.00/day",
       "fuel": "80L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Range Rover Sport combines luxury and off-road capability, providing a powerful performance and a luxurious interior."
     },
@@ -300,7 +300,7 @@
       "price": "$70.00/day",
       "fuel": "65L",
       "transmission": "Manual",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": "$75.00",
       "about": "The Subaru Forester is known for safety and all-weather performance, featuring standard all-wheel drive and a spacious interior."
     },
@@ -316,7 +316,7 @@
       "price": "$55.00/day",
       "fuel": "60L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": "$6588888.00",
       "about": "The Volkswagen Golf is a versatile hatchback that is practical and fun to drive, offering reliability and ample space."
     },
@@ -332,7 +332,7 @@
       "price": "$250.00/day",
       "fuel": "75L",
       "transmission": "Manual",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": "$270.00",
       "about": "The Jaguar F-Type is a high-performance sports car, offering incredible speed and an iconic design."
     },
@@ -348,7 +348,7 @@
       "price": "$350.00/day",
       "fuel": "80L",
       "transmission": "Automatic",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": null,
       "about": "The Bentley Continental GT is a luxurious grand tourer known for its exquisite craftsmanship and powerful engine."
     },
@@ -364,7 +364,7 @@
       "price": "$240.00/day",
       "fuel": "70L",
       "transmission": "Automatic",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": "$260.00",
       "about": "The Audi A8 combines luxury with cutting-edge technology, offering a comfortable ride with advanced features."
     },
@@ -380,7 +380,7 @@
       "price": "$280.00/day",
       "fuel": "75L",
       "transmission": "Automatic",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": "$300.00",
       "about": "The BMW 7 Series is a flagship luxury sedan known for its comfort, elegance, and cutting-edge technology."
     },
@@ -396,7 +396,7 @@
       "price": "$350.00/day",
       "fuel": "80L",
       "transmission": "Automatic",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": null,
       "about": "The Aston Martin DB11 blends luxury with a thrilling performance, offering a V12 engine and exquisite styling."
     },
@@ -412,7 +412,7 @@
       "price": "$99.00/day",
       "fuel": "90L",
       "transmission": "Manual",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": null,
       "about": "Koenigsegg is renowned for high performance and innovative technology. Founded in 1994, the brand focuses on producing hypercars that push engineering limits."
     },
@@ -428,7 +428,7 @@
       "price": "$80.00/day",
       "fuel": "80L",
       "transmission": "Manual",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": "$100.00",
       "about": "The Nissan GT-R, known as 'Godzilla', features a twin-turbo V6 and intelligent all-wheel drive, making it a favorite among enthusiasts."
     },
@@ -444,7 +444,7 @@
       "price": "$250.00/day",
       "fuel": "85L",
       "transmission": "Automatic",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": "$270.00",
       "about": "The Rolls-Royce Phantom epitomizes luxury and comfort, handcrafted with premium materials and advanced technology for an unparalleled driving experience."
     },
@@ -460,7 +460,7 @@
       "price": "$120.00/day",
       "fuel": "Electric",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Tesla Model S is a high-performance electric sedan featuring a large touchscreen interface and impressive acceleration with long-range capabilities."
     },
@@ -476,7 +476,7 @@
       "price": "$95.00/day",
       "fuel": "75L",
       "transmission": "Automatic",
-      "seats": "7 P",
+      "seats": "7 Person",
       "oldPrice": null,
       "about": "The Audi Q7 combines luxury and practicality with advanced safety technologies and powerful engines, perfect for families seeking a stylish SUV."
     },
@@ -492,7 +492,7 @@
       "price": "$90.00/day",
       "fuel": "80L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": "$100.00",
       "about": "The BMW X5 is a luxury SUV known for its sporty design and powerful engine options, providing a spacious cabin for passengers."
     },
@@ -508,7 +508,7 @@
       "price": "$45.00/day",
       "fuel": "55L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Toyota Corolla is a reliable, fuel-efficient compact sedan, known for its longevity and practicality. Ideal for daily commuting."
     },
@@ -524,7 +524,7 @@
       "price": "$110.00/day",
       "fuel": "70L",
       "transmission": "Manual",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": "$120.00",
       "about": "The Ford Mustang is an iconic American muscle car with powerful engines and classic styling, designed for speed and agility."
     },
@@ -540,7 +540,7 @@
       "price": "$105.00/day",
       "fuel": "72L",
       "transmission": "Manual",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": null,
       "about": "The Chevrolet Camaro is known for its sporty design and thrilling performance, offering powerful engines and an aggressive stance."
     },
@@ -556,7 +556,7 @@
       "price": "$50.00/day",
       "fuel": "60L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": "$60.00",
       "about": "The Honda Civic offers great value and reliability, known for durability and efficiency, making it a practical choice for commuters."
     },
@@ -572,7 +572,7 @@
       "price": "$85.00/day",
       "fuel": "70L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Hyundai Tucson is a compact SUV that balances style and functionality, providing a comfortable ride with excellent safety ratings."
     },
@@ -588,7 +588,7 @@
       "price": "$95.00/day",
       "fuel": "65L",
       "transmission": "Manual",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": "$110.00",
       "about": "The Jeep Wrangler is designed for off-road adventures with classic rugged capability. Perfect for outdoor enthusiasts and city driving."
     },
@@ -604,7 +604,7 @@
       "price": "$75.00/day",
       "fuel": "68L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Kia Sportage offers a comfortable ride with modern features, ideal for urban driving and weekend getaways."
     },
@@ -620,7 +620,7 @@
       "price": "$300.00/day",
       "fuel": "85L",
       "transmission": "Manual",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": "$320.00",
       "about": "The Lamborghini Huracan is a supercar delivering exhilarating performance with an aggressive design and powerful V10 engine."
     },
@@ -636,7 +636,7 @@
       "price": "$88.00/day",
       "fuel": "75L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Mazda CX-5 combines sporty handling with stylish design, offering a premium interior and advanced safety features."
     },
@@ -652,7 +652,7 @@
       "price": "$200.00/day",
       "fuel": "90L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": "$220.00",
       "about": "The Mercedes-Benz G-Class is a luxury SUV known for its commanding presence, rugged capability, and opulent interior."
     },
@@ -668,7 +668,7 @@
       "price": "$270.00/day",
       "fuel": "75L",
       "transmission": "Manual",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": "$280.00",
       "about": "The Porsche 911 is a timeless sports car recognized for performance and design, offering thrilling driving experiences with precision handling."
     },
@@ -684,7 +684,7 @@
       "price": "$185.00/day",
       "fuel": "80L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": null,
       "about": "The Range Rover Sport combines luxury and off-road capability, providing a powerful performance and a luxurious interior."
     },
@@ -700,7 +700,7 @@
       "price": "$70.00/day",
       "fuel": "65L",
       "transmission": "Manual",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": "$75.00",
       "about": "The Subaru Forester is known for safety and all-weather performance, featuring standard all-wheel drive and a spacious interior."
     },
@@ -716,7 +716,7 @@
       "price": "$55.00/day",
       "fuel": "60L",
       "transmission": "Automatic",
-      "seats": "6 P",
+      "seats": "6 Person",
       "oldPrice": "$65.00",
       "about": "The Volkswagen Golf is a versatile hatchback that is practical and fun to drive, offering reliability and ample space."
     },
@@ -732,7 +732,7 @@
       "price": "$250.00/day",
       "fuel": "75L",
       "transmission": "Manual",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": "$270.00",
       "about": "The Jaguar F-Type is a high-performance sports car, offering incredible speed and an iconic design."
     },
@@ -748,7 +748,7 @@
       "price": "$350.00/day",
       "fuel": "80L",
       "transmission": "Automatic",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": null,
       "about": "The Bentley Continental GT is a luxurious grand tourer known for its exquisite craftsmanship and powerful engine."
     },
@@ -764,7 +764,7 @@
       "price": "$240.00/day",
       "fuel": "70L",
       "transmission": "Automatic",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": "$260.00",
       "about": "The Audi A8 combines luxury with cutting-edge technology, offering a comfortable ride with advanced features."
     },
@@ -780,7 +780,7 @@
       "price": "$280.00/day",
       "fuel": "75L",
       "transmission": "Automatic",
-      "seats": "4 P",
+      "seats": "4 Person",
       "oldPrice": "$300.00",
       "about": "The BMW 7 Series is a flagship luxury sedan known for its comfort, elegance, and cutting-edge technology."
     },
@@ -796,7 +796,7 @@
       "price": "$350.00/day",
       "fuel": "80L",
       "transmission": "Automatic",
-      "seats": "2 P",
+      "seats": "2 Person",
       "oldPrice": null,
       "about": "The Aston Martin DB11 blends luxury with a thrilling performance, offering a V12 engine and exquisite styling."
     }
