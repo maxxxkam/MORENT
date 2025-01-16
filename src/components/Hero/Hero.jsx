@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import s from "./Hero.module.scss";
-import Btn from "../btn/Btn";
+import Btn from "../Btn/Btn";
 import Btn2 from "../Btn2/Btn2";
 import { Link } from "react-router-dom";
 

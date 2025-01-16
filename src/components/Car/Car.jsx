@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import s from "./Car.module.scss";
-import Btn from "../btn/Btn";
+import Btn from "../Btn/Btn";
 import { Link } from "react-router-dom";
 
 import AOS from "aos";
