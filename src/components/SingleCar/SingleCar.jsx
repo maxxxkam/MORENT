@@ -3,7 +3,7 @@ import axios from "axios";
 import s from "./SingleCar.module.scss";
 import { useParams, useNavigate, Link } from "react-router-dom";
 // import Btn from "../btn/Btn";
-import Modal from "../modal/Modal";
+import Modal from "../Modal/Modal";
 import Reviews from "../Reviews/Reviews";
 import AOS from "aos";
 import "aos/dist/aos.css";
