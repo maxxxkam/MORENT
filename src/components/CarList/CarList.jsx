@@ -19,7 +19,7 @@ const CarList = ({
         )}
       </div>
 
-      {/* Пагинация */}
+
       {totalPages > 1 && (
         <div className={s.pagination}>
           <button

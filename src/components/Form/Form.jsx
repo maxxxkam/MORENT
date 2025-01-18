@@ -103,7 +103,7 @@ const Form = () => {
   <div className={s.wrapper}>
       <div className={s.formContainer}>
      
-        <section className={s.section} data-aos="fade-up" data-aos-delay="200" >
+        <section className={s.section}  >
           <div className={s.wrap}>
             <div className={s.header}>
               <h2>Billing Info</h2>
@@ -159,7 +159,7 @@ const Form = () => {
         </section>
 
 
-        <section className={s.section} data-aos="fade-up" data-aos-delay="400" >
+        <section className={s.section}  >
           <div className={s.header}>
             <h2>Rental Info</h2>
             <span>Step 2 of 4</span>
@@ -250,7 +250,7 @@ const Form = () => {
           </form>
         </section>
 
-        <section className={s.section} data-aos="fade-up" data-aos-delay="600" >
+        <section className={s.section} >
           <div className={s.header}>
             <h2>Payment Method</h2>
             <span>Step 3 of 4</span>
@@ -323,7 +323,7 @@ const Form = () => {
           </form>
         </section>
 
-        <section className={s.section} data-aos="fade-up" data-aos-delay="800" >
+        <section className={s.section}>
   <div className={s.header}>
     <h2>Confirmation</h2>
     <span>Step 4 of 4</span>

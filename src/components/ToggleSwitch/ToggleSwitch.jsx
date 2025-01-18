@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import s from './ToggleSwitch.module.scss'; // SCSS modulini import qilish
+import s from './ToggleSwitch.module.scss'; 
 
 const ToggleSwitch = () => {
   const [isDay, setIsDay] = useState(true);

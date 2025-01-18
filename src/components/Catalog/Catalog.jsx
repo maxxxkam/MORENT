@@ -15,7 +15,6 @@ const Catalog = () => {
   const categories = ['Sport', 'SUV', 'Sedan', 'Hatchback'];
   const seatOptions = ['2 Person', '4 Person', '6 Person', '8 Person'];
 
-  // Фильтрация товаров с мемоизацией
   const filteredProducts = useMemo(() => {
     return Products.cars.filter((product) => {
       const productPrice = parseFloat(product.price.replace('$', ''));
@@ -31,13 +30,13 @@ const Catalog = () => {
     });
   }, [selectedCategories, selectedSeats, maxPrice]);
 
-  // Разбиение на страницы
+
   const paginatedProducts = useMemo(() => {
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     return filteredProducts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   }, [filteredProducts, currentPage]);
 
-  // Общее количество страниц
+
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
 
   const toggleCategory = (category) => {

@@ -15,7 +15,6 @@ const Chart = () => {
   const COLORS = ["#0D3559", "#175D9C", "#2185DE", "#63A9E8", "#A6CEF2"];
   const total = data.reduce((sum, item) => sum + item.value, 0);
 
-  // State для отслеживания ширины окна
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
 
   useEffect(() => {
@@ -61,14 +60,14 @@ const Chart = () => {
           <div className={s.legend}>
             {data.map((item, index) => (
               <div key={index} className={s.legendItem}>
-                {/* Кружок с цветом */}
+
                 <span
                   className={s.legendColor}
                   style={{
-                    backgroundColor: COLORS[index % COLORS.length], // Цвет из массива COLORS
+                    backgroundColor: COLORS[index % COLORS.length],
                   }}
                 ></span>
-                <span>{item.name}</span> {/* Название элемента */}
+                <span>{item.name}</span> 
               </div>
             ))}
           </div>

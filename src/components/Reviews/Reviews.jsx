@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import s from './Reviews.module.scss';
-import reviews from '/public/comments.json'; // Убедитесь, что путь к файлу правильный
+import reviews from '/public/comments.json'; 
 
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 
 const Reviews = () => {
-  const [visibleReviews, setVisibleReviews] = useState(2); // Изначально показываем 2 отзыва
+  const [visibleReviews, setVisibleReviews] = useState(2);
 
   const showMoreReviews = () => {
-    setVisibleReviews((prev) => prev + 2); // При клике добавляем еще 2 отзыва
+    setVisibleReviews((prev) => prev + 2); 
   };
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Reviews = () => {
       <div className="container">
         <div className={s.header}>
           <h2>Reviews</h2>
-          <span className={s.reviewsCount}>{reviews.length}</span> {/* Отображаем общее количество отзывов */}
+          <span className={s.reviewsCount}>{reviews.length}</span>
         </div>
         <div className={s.reviewsList}>
           {reviews.slice(0, visibleReviews).map((review) => (

@@ -24,7 +24,7 @@ const PickUp = () => {
       ...prev,
       [section]: value,
     }));
-    setExpandedSection(null); // Закрыть выпадающий список после выбора
+    setExpandedSection(null);
   };
 
   const generateDropOffDates = (pickupDate) => {
@@ -42,15 +42,12 @@ const PickUp = () => {
 
   const dropOffDates = generateDropOffDates(selectedValues['pickup-date']);
 
-  // Проверка, заполнил ли пользователь все поля
   const isFormComplete = Object.values(selectedValues).every((value) => value);
 
   const handleSubmit = () => {
-    // Если форма не полностью заполнена, показываем alert
     if (!isFormComplete) {
       alert('Please complete the list before submitting.');
     } else {
-      // Если все поля заполнены, можно отправить данные
       alert('Form submitted!');
     }
   };
@@ -67,13 +64,11 @@ const PickUp = () => {
       <div className="container">
         <div className={s.wrapper}>
           <div className={s.cards}>
-            {/* Pick-Up Section */}
             <div className={s.card}>
               <p>
                 <img src="/PickUp-img1.svg" alt="" /> Pick - Up
               </p>
               <div className={s.info}>
-                {/* Locations */}
                 <div>
                   <b>Locations</b>
                   <p onClick={() => toggleSection('pickup-locations')}>
@@ -114,7 +109,6 @@ const PickUp = () => {
                 </div>
                 <div className={s.line}></div>
 
-                {/* Date */}
                 <div>
                   <b>Date</b>
                   <p onClick={() => toggleSection('pickup-date')}>
@@ -155,7 +149,6 @@ const PickUp = () => {
                 </div>
                 <div className={s.line}></div>
 
-                {/* Time */}
                 <div>
                   <b>Time</b>
                   <p onClick={() => toggleSection('pickup-time')}>
@@ -189,18 +182,16 @@ const PickUp = () => {
 
             <button
               className={s.btn}
-              onClick={handleSubmit} // Вызов функции при нажатии
+              onClick={handleSubmit} 
             >
               <img src="/arrows-img.svg" alt="" />
             </button>
 
-            {/* Drop-Off Section */}
             <div className={s.card}>
               <p>
                 <img src="/PickUp-img1.svg" alt="" /> Drop - Off
               </p>
               <div className={s.info}>
-                {/* Locations */}
                 <div>
                   <b>Locations</b>
                   <p onClick={() => toggleSection('dropoff-locations')}>
@@ -243,7 +234,6 @@ const PickUp = () => {
                 </div>
                 <div className={s.line}></div>
 
-                {/* Date */}
                 <div>
                   <b>Date</b>
                   <p onClick={() => toggleSection('dropoff-date')}>
@@ -276,7 +266,6 @@ const PickUp = () => {
 
                 <div className={s.line}></div>
 
-                {/* Time */}
                 <div>
                   <b>Time</b>
                   <p onClick={() => toggleSection('dropoff-time')}>

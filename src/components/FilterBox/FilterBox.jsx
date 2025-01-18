@@ -22,7 +22,7 @@ const FilterBox = ({
     <section className={s.filterSection}>
       <div className="container">
         <div className={s.filter}>
-          {/* Фильтр по категориям */}
+    
           <div className={s.filterWrap}>
             <div className={s.filterGroup}>
               <h4>Type</h4>
@@ -39,7 +39,7 @@ const FilterBox = ({
             </div>
           </div>
 
-          {/* Фильтр по вместимости */}
+   
           <div className={s.filterGroup}>
             <h4>Capacity</h4>
             <div className={s.filterWrap2}>
@@ -56,7 +56,6 @@ const FilterBox = ({
             </div>
           </div>
 
-          {/* Фильтр по цене */}
           <div className={s.filterGroup}>
             <h4>Price</h4>
             <input

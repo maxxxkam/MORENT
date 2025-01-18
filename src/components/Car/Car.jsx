@@ -42,13 +42,13 @@ const CarCard = ({ car }) => {
       <h3 className={s.car_name}>{car.name}</h3>
       <p className={s.car_category}>{car.category}</p>
      <Link to={`/carPage/${car.id}`} >
-     <img src={car.image} alt={car.name} className={s.car_image} />
+     <img loading="lazy" src={car.image} alt={car.name} className={s.car_image} />
      </Link>
       
       <p className={s.car_details}>
-        <img src="/gas-station.svg" alt="Fuel" />
-        {car.fuel} <img src="/Car (2).svg" alt="Transmission" />
-        {car.transmission} <img src="/peoples1.svg" alt="Seats" />
+        <img loading="lazy" src="/gas-station.svg" alt="Fuel" />
+        {car.fuel} <img loading="lazy" src="/Car (2).svg" alt="Transmission" />
+        {car.transmission} <img loading="lazy" src="/peoples1.svg" alt="Seats" />
         {car.seats}
       </p>
       

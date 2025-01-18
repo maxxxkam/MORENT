@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import s from "./SingleCar.module.scss";
 import { useParams, useNavigate, Link } from "react-router-dom";
-// import Btn from "../btn/Btn";
 import Modal from "../Modal/Modal";
 import Reviews from "../Reviews/Reviews";
 import AOS from "aos";
@@ -17,11 +16,10 @@ const SingleCar = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
-  // Функция для загрузки данных автомобиля
   const fetchCar = async () => {
     try {
       const response = await axios.get(`http://localhost:3000/cars/${id}`);
-      setCar(response.data); // Сохраняем полученные данные автомобиля
+      setCar(response.data);
     } catch (error) {
       console.error("Ошибка при загрузке данных автомобиля: ", error);
     }
@@ -98,7 +96,6 @@ const SingleCar = () => {
                 </div>
               </div>
 
-              {/* Правая часть - Информация */}
               <div
                 className={`${s.box} ${s.box_2}`}
                 data-aos="fade-left"

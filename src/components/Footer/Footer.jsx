@@ -59,10 +59,10 @@ const Footer = () => {
     closeBusinessModal();
   };
 
-  // Функция для копирования ссылки
+ 
   const copyLinkToClipboard = () => {
-    const link = window.location.origin; // Получаем URL главной страницы
-    navigator.clipboard.writeText(link)  // Копируем ссылку в буфер обмена
+    const link = window.location.origin; 
+    navigator.clipboard.writeText(link)  
       .then(() => {
         alert('Ссылка скопирована в буфер обмена!');
       })

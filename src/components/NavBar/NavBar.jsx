@@ -1,4 +1,3 @@
-// import Dashboard from '../Dashboard/Dashboard';
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
 import s from './NavBar.module.scss';
 

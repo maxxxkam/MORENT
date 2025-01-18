@@ -9,7 +9,7 @@ const Dashboard = () => {
         <div className={s.map}>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.6553417343125!2d69.27198708779711!3d41.2946049973415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8bb0d9e36a43%3A0xb769fa17fbfeddd9!2sBYD%20CENTRAL%20ASIA!5e0!3m2!1sru!2s!4v1734023844569!5m2!1sru!2s"
-            width="100%" // Make it responsive
+            width="100%"
             height="450"
             style={{ border: 0 }}
             allowFullScreen=""
@@ -21,7 +21,7 @@ const Dashboard = () => {
         <div className={s.carDetails}>
           <div className={s.carHeader}>
             <img
-              src="/public/Look.png" // Update with actual path
+              src="/public/Look.png" 
               alt="Nissan GT-R"
               className={s.carImage}
             />

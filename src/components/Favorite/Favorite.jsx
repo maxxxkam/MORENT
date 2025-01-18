@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import s from './Favorite.module.scss';
 import { Link } from 'react-router-dom';
-// import Btn from "../Btn/Btn"; // Ваши компоненты кнопок и другие элементы
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -10,26 +9,25 @@ import Btn from '../Btn/Btn';
 const Favorite = () => {
   const [favoriteCars, setFavoriteCars] = useState([]);
 
-  // Загружаем избранные автомобили из localStorage
+
   useEffect(() => {
     const storedFavorites =
       JSON.parse(localStorage.getItem('favoriteCars')) || [];
     setFavoriteCars(storedFavorites);
   }, []);
 
-  // Функция для добавления/удаления автомобиля из избранного
   const handleFavoriteClick = (car) => {
     const storedFavorites =
       JSON.parse(localStorage.getItem('favoriteCars')) || [];
     let updatedFavorites;
 
     if (storedFavorites.some((favCar) => favCar.id === car.id)) {
-      // Убираем машину из избранного
+
       updatedFavorites = storedFavorites.filter(
         (favCar) => favCar.id !== car.id
       );
     } else {
-      // Добавляем машину в избранное
+  
       updatedFavorites = [...storedFavorites, car];
     }
 
