@@ -5,6 +5,10 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 20px;
+
+  @media (max-width:450px) {
+    max-width: 330px;
+  }
 }
 
 .filterWrap{

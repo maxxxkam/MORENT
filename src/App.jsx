@@ -15,6 +15,7 @@ import OrderPage from "./pages/OrderPage";
 import SetingsPage from "./pages/SetingsPage";
 import AdminPage from "./pages/AdminPage";
 
+
 const App = () => {
   return (
     <>
@@ -24,7 +25,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/carPage/:id" element={<CarPage />} />
         <Route path="/filter" element={<Filter />} />
-        <Route path="/order/:id" element={<OrderPage />} /> 
+        <Route  path="/order/:id" element={<OrderPage />} /> 
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/notification" element={<Notification />} />
         <Route path="/howpage" element={<How />} />
